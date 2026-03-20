@@ -23,21 +23,27 @@
  */
 #include <k/kstd.h>
 
+#include "io/serial.h"
 #include "multiboot.h"
+#include "stdio.h"
 
-
-void k_main(unsigned long magic, multiboot_info_t *info)
+void k_main(unsigned long magic, multiboot_info_t* info)
 {
-	(void)magic;
-	(void)info;
+    init_serial();
 
-	char star[4] = "|/-\\";
-	char *fb = (void *)0xb8000;
+    (void)magic;
+    (void)info;
 
-	for (unsigned i = 0; ; ) {
-		*fb = star[i++ % 4];
-	}
+    char star[5] = "|/-\\";
+    char* fb = (void*)0xb8000;
 
-	for (;;)
-		asm volatile ("hlt");
+    printf("hello world\r\n");
+
+    for (unsigned i = 0;;)
+    {
+        *fb = star[i++ % 4];
+    }
+
+    for (;;)
+        asm volatile("hlt");
 }
