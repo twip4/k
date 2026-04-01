@@ -30,8 +30,10 @@ OBJS	= \
 	  libvga.o \
 	  list.o \
 	  memory.o \
-	  io/serial.o
-
+	  io/serial.o \
+	  gdt.o \
+	  isr_stub.o \
+	  idt.o 
 
 DEPS = $(OBJS:.o=.d)
 

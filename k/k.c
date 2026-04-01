@@ -23,13 +23,18 @@
  */
 #include <k/kstd.h>
 
+#include "gdt.h"
+#include "idt.h"
 #include "io/serial.h"
+#include "memory.h"
 #include "multiboot.h"
 #include "stdio.h"
 
-void k_main(unsigned long magic, multiboot_info_t* info)
+void main_main(unsigned long magic, multiboot_info_t* info)
 {
     init_serial();
+    init_gdt();
+    idt_init();
 
     (void)magic;
     (void)info;
@@ -37,7 +42,7 @@ void k_main(unsigned long magic, multiboot_info_t* info)
     char star[5] = "|/-\\";
     char* fb = (void*)0xb8000;
 
-    printf("hello world\r\n");
+    printf("kernle start\r\n");
 
     for (unsigned i = 0;;)
     {
@@ -46,4 +51,23 @@ void k_main(unsigned long magic, multiboot_info_t* info)
 
     for (;;)
         asm volatile("hlt");
+}
+
+void k_main(unsigned long magic, multiboot_info_t* info)
+{
+    memory_init(info);
+    (void)magic;
+
+    void* stack_begin = memory_reserve(0x4000);
+    void* stack_end = (char*)stack_begin + 0x4000;
+
+    asm volatile("mov %0, %%esp\n"
+                 "mov %0, %%ebp\n"
+                 "push %%ecx\n" // info
+                 "push %%eax\n" // magic
+                 "call main_main\n"
+                 "cli\n"
+                 "hlt\n"
+                 :
+                 : "r"(stack_end));
 }
