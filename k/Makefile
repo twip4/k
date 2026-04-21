@@ -33,7 +33,8 @@ OBJS	= \
 	  io/serial.o \
 	  gdt.o \
 	  isr_stub.o \
-	  idt.o 
+	  idt.o \
+	  io/keyboard.o
 
 DEPS = $(OBJS:.o=.d)
 

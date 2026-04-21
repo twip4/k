@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 #include "io.h"
+#include "io/keyboard.h"
 #include "io/serial.h"
 #include "timer.h"
 
@@ -34,6 +35,11 @@ typedef struct
 
 void generic_c_handler(interrupt_frame_t* frame)
 {
+    if (frame->vector == 0)
+    {
+        printf("Divide by 0\n");
+    }
+
     if (frame->vector == 32)
     {
         time++;
@@ -48,11 +54,8 @@ void generic_c_handler(interrupt_frame_t* frame)
 
     if (frame->vector == 33)
     {
-        printf("vector=%d error_code=%d eip=0x%x\n", frame->vector,
-               frame->error_code, frame->eip);
+        handleKeyboard();
     }
-
-    write_serial('!');
 }
 
 void idt_set_descriptor(u8 vector, void* isr, u8 flags)
