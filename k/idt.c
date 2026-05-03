@@ -5,9 +5,8 @@
 #include "io.h"
 #include "io/keyboard.h"
 #include "io/serial.h"
+#include "syscall.h"
 #include "timer.h"
-
-extern u32 time;
 
 void pic_remap(void)
 {
@@ -26,13 +25,6 @@ void pic_remap(void)
 idt_entry_t idt[IDT_MAX_DESCRIPTORS];
 idtr_t idtr;
 
-typedef struct
-{
-    u32 edi, esi, ebp, esp, ebx, edx, ecx, eax;
-    u32 vector, error_code;
-    u32 eip, cs, eflags;
-} interrupt_frame_t;
-
 void generic_c_handler(interrupt_frame_t* frame)
 {
     if (frame->vector == 0)
@@ -40,21 +32,28 @@ void generic_c_handler(interrupt_frame_t* frame)
         printf("Divide by 0\n");
     }
 
-    if (frame->vector == 32)
+    if (frame->vector >= 32 && frame->vector < 48)
     {
-        time++;
-    }
+        if (frame->vector == 32)
+        {
+            time++; // timer
+        }
+        else if (frame->vector == 33)
+        {
+            handleKeyboard(); // clavier
+        }
 
-    if (frame->vector >= 32)
-    {
         if (frame->vector >= 40)
-            outb(0xA0, 0x20); // PIC 2
-        outb(0x20, 0x20); // PIC 1
+            outb(0xA0, 0x20); // PIC2
+        outb(0x20, 0x20); // PIC1
+        return;
     }
 
-    if (frame->vector == 33)
+    // syscall
+    if (frame->vector == 128)
     {
-        handleKeyboard();
+        handleSyscall(frame);
+        return;
     }
 }
 
@@ -71,24 +70,30 @@ void idt_set_descriptor(u8 vector, void* isr, u8 flags)
 
 static u8 vectors[IDT_MAX_DESCRIPTORS];
 
-extern void* isr_stub_table[48];
+extern void* isr_stub_table[256];
 
 void idt_init()
 {
     pic_remap();
+
     idtr.base = (u32)&idt[0];
     idtr.limit = (u16)sizeof(idt_entry_t) * IDT_MAX_DESCRIPTORS - 1;
 
+    // CPU exception
     for (u16 vector = 0; vector < 32; vector++)
     {
         idt_set_descriptor(vector, isr_stub_table[vector], 0x8E);
         vectors[vector] = 1;
     }
 
+    // PIC hardware
     for (u16 vector = 32; vector < 48; vector++)
     {
         idt_set_descriptor(vector, isr_stub_table[vector], 0x8E);
     }
+
+    // syscall ring 3
+    idt_set_descriptor(128, isr_stub_table[128], 0xEE);
 
     __asm__ volatile("lidt %0" : : "m"(idtr));
     __asm__ volatile("sti");

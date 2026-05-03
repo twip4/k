@@ -34,7 +34,9 @@ OBJS	= \
 	  gdt.o \
 	  isr_stub.o \
 	  idt.o \
-	  io/keyboard.o
+	  io/keyboard.o \
+	  timer.o \
+	  syscall.o
 
 DEPS = $(OBJS:.o=.d)
 

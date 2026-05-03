@@ -3,6 +3,25 @@
 #include <stdio.h>
 
 #include "../io.h"
+#include "k/kstd.h"
+
+static const char layoutQWERTY[128] = {
+    0,   27,   '1',  '2', '3',  '4', '5', '6', '7', '8', '9', '0', '-',
+    '=', '\b', '\t', 'q', 'w',  'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+    '[', ']',  '\n', 0,   'a',  's', 'd', 'f', 'g', 'h', 'j', 'k', 'l',
+    ';', '\'', '`',  0,   '\\', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',',
+    '.', '/',  0,    '*', 0,    ' ', 0,   0,   0,   0,   0,   0,   0,
+    0,   0,    0,    0,   0,    0,   '7', '8', '9', '-', '4', '5', '6',
+    '+', '1',  '2',  '3', '0',  '.', 0,   0,   0,   0,   0,
+};
+
+static char scancode_to_ascii(u8 scanCode)
+{
+    if (scanCode >= 128)
+        return scanCode;
+
+    return layoutQWERTY[scanCode];
+}
 
 void fifo_push(struct key_event event)
 {
@@ -26,10 +45,14 @@ int readkey(struct key_event* event)
 void handleKeyboard(void)
 {
     u8 scancode = inb(0x60);
-    struct key_event event = { scancode & 0x80 ? KEY_PRESSED : KEY_RELEASED,
-                               scancode };
+    u8 press = !(scancode & 0x80);
+    struct key_event event = { press ? KEY_PRESSED : KEY_RELEASED,
+                               press ? scancode_to_ascii(scancode) : 0 };
     fifo_push(event);
 
     // debug
-    printf("touch press %d, scancode %d\n", event.state, event.key);
+    if (event.state == KEY_PRESSED)
+    {
+        printf("touch press %c\n", event.key);
+    }
 }

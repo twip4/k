@@ -73,52 +73,29 @@ isr_common:
 
 .global isr_stub_table
 isr_stub_table:
-    .long isr_0
-    .long isr_1
-    .long isr_2
-    .long isr_3
-    .long isr_4
-    .long isr_5
-    .long isr_6
-    .long isr_7
-    .long isr_8
-    .long isr_9
-    .long isr_10
-    .long isr_11
-    .long isr_12
-    .long isr_13
-    .long isr_14
-    .long isr_15
-    .long isr_16
-    .long isr_17
-    .long isr_18
-    .long isr_19
-    .long isr_20
-    .long isr_21
-    .long isr_22
-    .long isr_23
-    .long isr_24
-    .long isr_25
-    .long isr_26
-    .long isr_27
-    .long isr_28
-    .long isr_29
-    .long isr_30
-    .long isr_31
-    .long isr_32
-    .long isr_33
-    .long isr_34
-    .long isr_35
-    .long isr_36
-    .long isr_37
-    .long isr_38
-    .long isr_39
-    .long isr_40
-    .long isr_41
-    .long isr_42
-    .long isr_43
-    .long isr_44
-    .long isr_45
-    .long isr_46
-    .long isr_47
+    .long isr_0,  isr_1,  isr_2,  isr_3
+    .long isr_4,  isr_5,  isr_6,  isr_7
+    .long isr_8,  isr_9,  isr_10, isr_11
+    .long isr_12, isr_13, isr_14, isr_15
+    .long isr_16, isr_17, isr_18, isr_19
+    .long isr_20, isr_21, isr_22, isr_23
+    .long isr_24, isr_25, isr_26, isr_27
+    .long isr_28, isr_29, isr_30, isr_31
+    .long isr_32, isr_33, isr_34, isr_35
+    .long isr_36, isr_37, isr_38, isr_39
+    .long isr_40, isr_41, isr_42, isr_43
+    .long isr_44, isr_45, isr_46, isr_47
+    .rept 80
+    .long isr_generic
+    .endr
+    .long isr_128
+
+.global isr_generic
+isr_generic:
+    pushl $0
+    pushl $0xFF
+    jmp isr_common
+
+# Syscall handler
+isr_no_err_stub 128
 

@@ -3,6 +3,8 @@
 
 #include <k/types.h>
 
-u32 time = 0;
+extern u32 time;
+
+int gettick(void);
 
 #endif /* TIMER_H */

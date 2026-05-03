@@ -28,6 +28,13 @@ typedef struct
     u32 base;
 } __attribute__((packed)) idtr_t;
 
+typedef struct
+{
+    u32 edi, esi, ebp, esp, ebx, edx, ecx, eax;
+    u32 vector, error_code;
+    u32 eip, cs, eflags;
+} interrupt_frame_t;
+
 extern idtr_t idtr;
 
 void idt_init(void);
