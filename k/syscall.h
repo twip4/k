@@ -2,13 +2,12 @@
 #define SYSCALL_H
 
 #include "idt.h"
+#include "k/kstd.h"
 #include "k/types.h"
-
-#define SYSCALL_SIZE 333
 
 typedef u32 (*handler_function)(u32 ebx, u32 ecx, u32 edx);
 
-extern handler_function handler_table[SYSCALL_SIZE];
+extern handler_function handler_table[NR_SYSCALL];
 
 void handleSyscall(interrupt_frame_t* frame);
 

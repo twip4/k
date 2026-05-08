@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 #include "io/keyboard.h"
+#include "k/kstd.h"
 #include "k/types.h"
 #include "timer.h"
 
@@ -22,11 +23,11 @@ u32 sys_getmouse(u32 ebx, u32 ecx, u32 edx);
 u32 sys_getkeymode(u32 ebx, u32 ecx, u32 edx);
 u32 sys_readkey(u32 ebx, u32 ecx, u32 edx);
 
-handler_function handler_table[SYSCALL_SIZE];
+handler_function handler_table[NR_SYSCALL];
 
 void handleSyscall(interrupt_frame_t* frame)
 {
-    if (frame->eax >= SYSCALL_SIZE)
+    if (frame->eax >= NR_SYSCALL)
     {
         frame->eax = -1;
         return;
@@ -43,33 +44,32 @@ void handleSyscall(interrupt_frame_t* frame)
 
 void syscall_table_init()
 {
-    for (int i = 0; i < SYSCALL_SIZE; i++)
+    for (int i = 0; i < NR_SYSCALL; i++)
     {
         handler_table[i] = 0;
     }
 
-    syscall_register(0, sys_write);
-    syscall_register(0, sys_sbrk);
-    syscall_register(0, sys_getkey);
-    syscall_register(0, sys_gettick);
-    syscall_register(0, sys_open);
-    syscall_register(0, sys_read);
-    syscall_register(0, sys_lseek);
-    syscall_register(0, sys_close);
-    syscall_register(0, sys_setvideo);
-    syscall_register(0, sys_swap_frontbuffer);
-    syscall_register(0, sys_playsound);
-    syscall_register(0, sys_getmouse);
-    syscall_register(0, sys_getkeymode);
-    syscall_register(0, sys_readkey);
-    syscall_register(42, sys_test);
+    syscall_register(SYSCALL_WRITE, sys_write);
+    syscall_register(SYSCALL_SBRK, sys_sbrk);
+    syscall_register(SYSCALL_GETKEY, sys_getkey);
+    syscall_register(SYSCALL_GETTICK, sys_gettick);
+    syscall_register(SYSCALL_OPEN, sys_open);
+    syscall_register(SYSCALL_READ, sys_read);
+    syscall_register(SYSCALL_SEEK, sys_lseek);
+    syscall_register(SYSCALL_CLOSE, sys_close);
+    syscall_register(SYSCALL_SETVIDEO, sys_setvideo);
+    syscall_register(SYSCALL_SWAP_FRONTBUFFER, sys_swap_frontbuffer);
+    syscall_register(SYSCALL_PLAYSOUND, sys_playsound);
+    syscall_register(SYSCALL_GETMOUSE, sys_getmouse);
+    syscall_register(SYSCALL_READKEY, sys_readkey);
+    syscall_register(0, sys_test);
 
     printf("syscall init\n");
 }
 
 void syscall_register(u32 id, handler_function handler)
 {
-    if (id >= SYSCALL_SIZE)
+    if (id >= NR_SYSCALL)
         return;
 
     handler_table[id] = handler;
@@ -194,16 +194,6 @@ u32 sys_playsound(u32 ebx, u32 ecx, u32 edx)
 }
 
 u32 sys_getmouse(u32 ebx, u32 ecx, u32 edx)
-{
-    (void)ebx;
-    (void)ecx;
-    (void)edx;
-
-    printf("ptite bite\n");
-    return 42;
-}
-
-u32 sys_getkeymode(u32 ebx, u32 ecx, u32 edx)
 {
     (void)ebx;
     (void)ecx;
