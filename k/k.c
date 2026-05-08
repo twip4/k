@@ -29,12 +29,14 @@
 #include "memory.h"
 #include "multiboot.h"
 #include "stdio.h"
+#include "syscall.h"
 
 void main_main(unsigned long magic, multiboot_info_t* info)
 {
     init_serial();
     init_gdt();
     idt_init();
+    syscall_table_init();
 
     int res;
     __asm__ volatile("mov $0, %%eax\n"

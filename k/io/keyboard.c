@@ -42,17 +42,24 @@ int readkey(struct key_event* event)
     return 1;
 }
 
+int getkey(void)
+{
+    struct key_event event;
+    readkey(&event);
+    return event.key;
+}
+
 void handleKeyboard(void)
 {
     u8 scancode = inb(0x60);
     u8 press = !(scancode & 0x80);
     struct key_event event = { press ? KEY_PRESSED : KEY_RELEASED,
-                               press ? scancode_to_ascii(scancode) : 0 };
+                               press ? scancode : 0 };
     fifo_push(event);
 
     // debug
     if (event.state == KEY_PRESSED)
     {
-        printf("touch press %c\n", event.key);
+        printf("%c", scancode_to_ascii(event.key));
     }
 }

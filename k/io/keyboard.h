@@ -21,4 +21,6 @@ void handleKeyboard(void);
 
 int readkey(struct key_event* event);
 
+int getkey(void);
+
 #endif /* !KEYBOARD_H */
