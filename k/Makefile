@@ -36,7 +36,8 @@ OBJS	= \
 	  idt.o \
 	  io/keyboard.o \
 	  timer.o \
-	  syscall.o
+	  syscall.o \
+	  io/vga.o
 
 DEPS = $(OBJS:.o=.d)
 

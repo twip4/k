@@ -21,11 +21,14 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
 #include <k/kstd.h>
+#include <string.h>
 
 #include "gdt.h"
 #include "idt.h"
 #include "io/serial.h"
+#include "io/vga.h"
 #include "memory.h"
 #include "multiboot.h"
 #include "stdio.h"

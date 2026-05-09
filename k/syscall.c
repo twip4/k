@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 #include "io/keyboard.h"
+#include "io/vga.h"
 #include "k/kstd.h"
 #include "k/types.h"
 #include "timer.h"
@@ -165,22 +166,19 @@ u32 sys_close(u32 ebx, u32 ecx, u32 edx)
 
 u32 sys_setvideo(u32 ebx, u32 ecx, u32 edx)
 {
-    (void)ebx;
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
-    return 42;
+    return setvideo(ebx);
 }
 
 u32 sys_swap_frontbuffer(u32 ebx, u32 ecx, u32 edx)
 {
-    (void)ebx;
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
-    return 42;
+    swap_frontbuffer((void*)ebx);
+    return 0;
 }
 
 u32 sys_playsound(u32 ebx, u32 ecx, u32 edx)
