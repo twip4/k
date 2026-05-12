@@ -38,7 +38,8 @@ OBJS	= \
 	  timer.o \
 	  syscall.o \
 	  io/vga.o \
-	  atapi.o
+	  atapi.o \
+	  filesystem.o
 
 DEPS = $(OBJS:.o=.d)
 

@@ -26,6 +26,7 @@
 #include <string.h>
 
 #include "atapi.h"
+#include "filesystem.h"
 #include "gdt.h"
 #include "idt.h"
 #include "io/serial.h"
@@ -41,6 +42,18 @@ void main_main(unsigned long magic, multiboot_info_t* info)
     idt_init();
     syscall_table_init();
     atapi_init();
+
+    int fd = open("/bin/hunter", O_RDONLY);
+    printf("fd = %d\n", fd);
+
+    if (fd >= 0)
+    {
+        char buf[128];
+        ssize_t n = read(fd, buf, 127);
+        buf[n] = '\0';
+        printf("read %d bytes: %s\n", n, buf);
+        close(fd);
+    }
 
     (void)magic;
     (void)info;

@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 
+#include "filesystem.h"
 #include "io/keyboard.h"
 #include "io/vga.h"
 #include "k/kstd.h"
@@ -130,7 +131,7 @@ u32 sys_open(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
+    open("ptitbite/cocu.exe", 4);
     return 42;
 }
 

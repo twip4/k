@@ -1,5 +1,6 @@
 #include "atapi.h"
 
+#include <stdio.h>
 #include <string.h>
 
 #include "io.h"
@@ -20,10 +21,10 @@ int is_atapi_driver(int base)
     u8 atapi_sig[4] = { 0x01, 0x01, 0x14, 0xEB };
 
     u8 sig[4];
-    sig[0] = inb(base + 2);
-    sig[1] = inb(base + 3);
-    sig[2] = inb(base + 4);
-    sig[3] = inb(base + 5);
+    sig[0] = inb(ATA_REG_SECTOR_COUNT(base));
+    sig[1] = inb(ATA_REG_LBA_LO(base));
+    sig[2] = inb(ATA_REG_LBA_MI(base));
+    sig[3] = inb(ATA_REG_LBA_HI(base));
 
     return !memcmp(atapi_sig, sig, 4);
 }
@@ -31,7 +32,7 @@ int is_atapi_driver(int base)
 void atapi_init(void)
 {
     int bus_base[] = { 0x1F0, 0x170 };
-    int driver_base[] = { 0xA0, 0xB0 };
+    int driver_base[] = { ATA_PORT_MASTER, ATA_PORT_SLAVE };
 
     outb(bus_base[0] + 0x206, 0x04);
     outb(bus_base[0] + 0x206, 0x02);
@@ -52,7 +53,7 @@ void atapi_init(void)
                 atapi_driver = driver_base[j];
                 atapi_bus = bus_base[i];
 
-                // printf("0x%x, 0x%x\n", atapi_driver, atapi_bus); // debug
+                printf("0x%x, 0x%x\n", atapi_driver, atapi_bus); // debug
                 return;
             }
         }
@@ -83,7 +84,7 @@ void wait_packet_request(u16 drive)
 
 void select_drive(u16 bus, u8 slave)
 {
-    outb(bus + DRIVE_SELECT, slave); // Drive select
+    outb(ATA_REG_DRIVE(bus), 0xA0 | slave); // Drive select
     wait_device_selection(bus);
 }
 
