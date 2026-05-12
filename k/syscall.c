@@ -4,6 +4,7 @@
 
 #include "filesystem.h"
 #include "io/keyboard.h"
+#include "io/serial.h"
 #include "io/vga.h"
 #include "k/kstd.h"
 #include "k/types.h"
@@ -89,12 +90,11 @@ u32 sys_test(u32 ebx, u32 ecx, u32 edx)
 
 u32 sys_write(u32 ebx, u32 ecx, u32 edx)
 {
-    (void)ebx;
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
-    return 42;
+    write_serial(ebx);
+    return 0;
 }
 
 u32 sys_sbrk(u32 ebx, u32 ecx, u32 edx)
@@ -127,42 +127,27 @@ u32 sys_gettick(u32 ebx, u32 ecx, u32 edx)
 
 u32 sys_open(u32 ebx, u32 ecx, u32 edx)
 {
-    (void)ebx;
-    (void)ecx;
     (void)edx;
 
-    open("ptitbite/cocu.exe", 4);
-    return 42;
+    return open((const char*)ebx, ecx);
 }
 
 u32 sys_read(u32 ebx, u32 ecx, u32 edx)
 {
-    (void)ebx;
-    (void)ecx;
-    (void)edx;
-
-    printf("ptite bite\n");
-    return 42;
+    return read(ebx, (void*)ecx, edx);
 }
 
 u32 sys_lseek(u32 ebx, u32 ecx, u32 edx)
 {
-    (void)ebx;
-    (void)ecx;
-    (void)edx;
-
-    printf("ptite bite\n");
-    return 42;
+    return seek(ebx, ecx, edx);
 }
 
 u32 sys_close(u32 ebx, u32 ecx, u32 edx)
 {
-    (void)ebx;
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
-    return 42;
+    return close(ebx);
 }
 
 u32 sys_setvideo(u32 ebx, u32 ecx, u32 edx)
@@ -204,10 +189,8 @@ u32 sys_getmouse(u32 ebx, u32 ecx, u32 edx)
 
 u32 sys_readkey(u32 ebx, u32 ecx, u32 edx)
 {
-    (void)ebx;
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
-    return 42;
+    return readkey((struct key_event*)ebx);
 }
