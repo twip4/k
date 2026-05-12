@@ -25,10 +25,10 @@
 #include <k/kstd.h>
 #include <string.h>
 
+#include "atapi.h"
 #include "gdt.h"
 #include "idt.h"
 #include "io/serial.h"
-#include "io/vga.h"
 #include "memory.h"
 #include "multiboot.h"
 #include "stdio.h"
@@ -40,16 +40,7 @@ void main_main(unsigned long magic, multiboot_info_t* info)
     init_gdt();
     idt_init();
     syscall_table_init();
-
-    int res;
-    __asm__ volatile("mov $0, %%eax\n"
-                     "mov $0, %%ebx\n"
-                     "int $0x80\n"
-                     "mov %%eax, %0\n"
-                     : "=r"(res)
-                     :
-                     : "eax", "ebx");
-    printf("[d] eax=%d\r\n", res);
+    atapi_init();
 
     (void)magic;
     (void)info;
