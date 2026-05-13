@@ -26,6 +26,7 @@
 #include <string.h>
 
 #include "atapi.h"
+#include "elf.h"
 #include "filesystem.h"
 #include "gdt.h"
 #include "idt.h"
@@ -57,18 +58,25 @@ void main_main(unsigned long magic, multiboot_info_t* info)
 
     read(fd, buff, size);
 
-    printf("Game load successful\n");
+    Elf32_Ehdr* elf_header = buff;
 
-    char star[5] = "|/-\\";
-    char* fb = (void*)0xb8000;
+    Elf32_Phdr* phdr = (Elf32_Phdr*)((u8*)buff + elf_header->e_phoff);
 
-    for (unsigned i = 0;;)
+    for (int i = 0; i < elf_header->e_phnum; i++)
     {
-        *fb = star[i++ % 4];
+        if (phdr[i].p_type == PT_LOAD)
+        {
+            memcpy((void*)phdr[i].p_vaddr, buff + phdr[i].p_offset,
+                   phdr[i].p_filesz);
+            memset((void*)(phdr[i].p_vaddr + phdr[i].p_filesz), 0,
+                   phdr[i].p_memsz - phdr[i].p_filesz);
+        }
     }
 
-    for (;;)
-        asm volatile("hlt");
+    printf("Game load successful\n");
+
+    void (*entry)(void) = (void (*)(void))elf_header->e_entry;
+    entry();
 }
 
 void k_main(unsigned long magic, multiboot_info_t* info)
