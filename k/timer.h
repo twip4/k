@@ -7,4 +7,6 @@ extern u32 time;
 
 int gettick(void);
 
+void timer_init();
+
 #endif /* TIMER_H */

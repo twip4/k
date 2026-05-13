@@ -35,11 +35,11 @@ void fifo_push(struct key_event event)
 int readkey(struct key_event* event)
 {
     if (fifo.count == 0)
-        return 0; // vide
+        return 1; // vide
     *event = fifo.buf[fifo.head];
     fifo.head = (fifo.head + 1) % FIFO_SIZE;
     fifo.count--;
-    return 1;
+    return 0;
 }
 
 int getkey(void)

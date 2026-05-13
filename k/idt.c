@@ -38,7 +38,8 @@ void generic_c_handler(interrupt_frame_t* frame)
         {
             time++; // timer
         }
-        else if (frame->vector == 33)
+
+        if (frame->vector == 33)
         {
             handleKeyboard(); // clavier
         }
@@ -46,14 +47,12 @@ void generic_c_handler(interrupt_frame_t* frame)
         if (frame->vector >= 40)
             outb(0xA0, 0x20); // PIC2
         outb(0x20, 0x20); // PIC1
-        return;
     }
 
     // syscall
     if (frame->vector == 128)
     {
         handleSyscall(frame);
-        return;
     }
 }
 

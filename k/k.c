@@ -36,12 +36,14 @@
 #include "sbrk.h"
 #include "stdio.h"
 #include "syscall.h"
+#include "timer.h"
 
 void main_main(unsigned long magic, multiboot_info_t* info)
 {
     (void)magic;
     init_serial();
     init_gdt();
+    timer_init();
     idt_init();
     syscall_table_init();
     atapi_init();
