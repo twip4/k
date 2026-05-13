@@ -1,5 +1,7 @@
 #include "serial.h"
 
+#include <stdio.h>
+
 #include "../io.h"
 
 #define PORT 0x3F8
@@ -16,6 +18,7 @@ int init_serial()
     outb(PORT + 4, 0x1E); // Set in loopback mode, test the serial chip
     outb(PORT + 0, 0xAE); // Test serial chip (send byte 0xAE and check if
                           // serial returns same byte)
+    printf("Serial init successful\n");
 
     // Check if serial is faulty (i.e: not same byte as sent)
     if (inb(PORT + 0) != 0xAE)

@@ -39,7 +39,8 @@ OBJS	= \
 	  syscall.o \
 	  io/vga.o \
 	  atapi.o \
-	  filesystem.o
+	  filesystem.o \
+	  sbrk.o
 
 DEPS = $(OBJS:.o=.d)
 

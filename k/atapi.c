@@ -53,11 +53,12 @@ void atapi_init(void)
                 atapi_driver = driver_base[j];
                 atapi_bus = bus_base[i];
 
-                printf("0x%x, 0x%x\n", atapi_driver, atapi_bus); // debug
                 return;
             }
         }
     }
+
+    printf("atapi init successful\n");
 }
 
 void busy_wait(u16 drive)

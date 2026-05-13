@@ -32,36 +32,35 @@
 #include "io/serial.h"
 #include "memory.h"
 #include "multiboot.h"
+#include "sbrk.h"
 #include "stdio.h"
 #include "syscall.h"
 
 void main_main(unsigned long magic, multiboot_info_t* info)
 {
+    (void)magic;
     init_serial();
     init_gdt();
     idt_init();
     syscall_table_init();
     atapi_init();
+    heap_init();
 
-    int fd = open("/bin/hunter", O_RDONLY);
-    printf("fd = %d\n", fd);
+    printf("kernle start\r\n");
 
-    if (fd >= 0)
-    {
-        char buf[128];
-        ssize_t n = read(fd, buf, 127);
-        buf[n] = '\0';
-        printf("read %d bytes: %s\n", n, buf);
-        close(fd);
-    }
+    int fd = open((char*)info->cmdline, 0);
 
-    (void)magic;
-    (void)info;
+    int size = seek(fd, 0, SEEK_END); // get size and reset
+    seek(fd, 0, SEEK_SET);
+
+    void* buff = memory_reserve(size);
+
+    read(fd, buff, size);
+
+    printf("Game load successful\n");
 
     char star[5] = "|/-\\";
     char* fb = (void*)0xb8000;
-
-    printf("kernle start\r\n");
 
     for (unsigned i = 0;;)
     {
@@ -82,11 +81,8 @@ void k_main(unsigned long magic, multiboot_info_t* info)
 
     asm volatile("mov %0, %%esp\n"
                  "mov %0, %%ebp\n"
-                 "push %%ecx\n" // info
-                 "push %%eax\n" // magic
-                 "call main_main\n"
-                 "cli\n"
-                 "hlt\n"
                  :
                  : "r"(stack_end));
+
+    main_main(magic, info);
 }

@@ -8,6 +8,7 @@
 #include "io/vga.h"
 #include "k/kstd.h"
 #include "k/types.h"
+#include "sbrk.h"
 #include "timer.h"
 
 u32 sys_test(u32 ebx, u32 ecx, u32 edx);
@@ -67,7 +68,7 @@ void syscall_table_init()
     syscall_register(SYSCALL_READKEY, sys_readkey);
     syscall_register(0, sys_test);
 
-    printf("syscall init\n");
+    printf("Syscall init successful\n");
 }
 
 void syscall_register(u32 id, handler_function handler)
@@ -103,8 +104,7 @@ u32 sys_sbrk(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
-    return 42;
+    return (u32)sbrk(ebx);
 }
 
 u32 sys_getkey(u32 ebx, u32 ecx, u32 edx)

@@ -58,8 +58,8 @@ void handleKeyboard(void)
     fifo_push(event);
 
     // debug
-    if (event.state == KEY_PRESSED)
-    {
-        printf("%c", scancode_to_ascii(event.key));
-    }
+    // if (event.state == KEY_PRESSED)
+    // {
+    //    printf("%c", scancode_to_ascii(event.key));
+    // }
 }
