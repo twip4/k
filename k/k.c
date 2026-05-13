@@ -66,6 +66,16 @@ void main_main(unsigned long magic, multiboot_info_t* info)
     {
         if (phdr[i].p_type == PT_LOAD)
         {
+            printf("segment %d: vaddr=0x%x flags=%s filesz=%d memsz=%d\n", i,
+                   phdr[i].p_vaddr, (phdr[i].p_flags & PF_X) ? "CODE" : "DATA",
+                   phdr[i].p_filesz, phdr[i].p_memsz);
+        }
+    }
+
+    for (int i = 0; i < elf_header->e_phnum; i++)
+    {
+        if (phdr[i].p_type == PT_LOAD)
+        {
             memcpy((void*)phdr[i].p_vaddr, buff + phdr[i].p_offset,
                    phdr[i].p_filesz);
             memset((void*)(phdr[i].p_vaddr + phdr[i].p_filesz), 0,

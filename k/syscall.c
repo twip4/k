@@ -85,7 +85,7 @@ u32 sys_test(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
+    printf("sys test\n");
     return 42;
 }
 
@@ -173,7 +173,7 @@ u32 sys_playsound(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
+    printf("sys sound\n");
     return 42;
 }
 
@@ -183,7 +183,7 @@ u32 sys_getmouse(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    printf("ptite bite\n");
+    printf("sys mouse\n");
     return 42;
 }
 
@@ -192,5 +192,7 @@ u32 sys_readkey(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    return readkey((struct key_event*)ebx);
+    struct key_event* key_event = (struct key_event*)ebx;
+
+    return readkey(key_event);
 }
