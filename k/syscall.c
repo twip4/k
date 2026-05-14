@@ -196,7 +196,6 @@ u32 sys_playsound(u32 ebx, u32 ecx, u32 edx)
     (void)edx;
 
     return playsound((struct melody*)ebx, (int)ecx);
-    return -1;
 }
 
 u32 sys_getmouse(u32 ebx, u32 ecx, u32 edx)

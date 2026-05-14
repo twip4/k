@@ -22,6 +22,23 @@ struct GDTR
     u32 base;
 } __attribute__((packed));
 
-void init_gdt();
+struct tss_entry
+{
+    u32 prev_tss;
+    u32 esp0;
+    u32 ss0;
+    u32 esp1;
+    u32 ss1;
+    u32 esp2;
+    u32 ss2;
+    u32 cr3, eip, eflags;
+    u32 eax, ecx, edx, ebx;
+    u32 esp, ebp, esi, edi;
+    u32 es, cs, ss, ds, fs, gs;
+    u32 ldt;
+    u16 trap, iomap_base;
+} __attribute__((packed));
+
+void init_gdt(void* stack_end);
 
 #endif /* !GDT_H */

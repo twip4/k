@@ -3,9 +3,11 @@
 #include <stdio.h>
 
 #include "memory.h"
+#include "string.h"
 
 struct GDT_entry GDT[6];
 struct GDTR gdtr;
+struct tss_entry tss;
 
 void encodeGdtEntry(u8* target, struct segment source)
 {
@@ -34,14 +36,19 @@ void encodeGdtEntry(u8* target, struct segment source)
     target[6] |= (source.flags << 4);
 }
 
-void init_gdt()
+void init_gdt(void* stack_end)
 {
+    memset(&tss, 0, sizeof(tss));
+    tss.ss0 = 0x10;
+    tss.esp0 = (u32)stack_end;
+    tss.iomap_base = sizeof(tss);
+
     segment null_desc = { 0, 0, 0, 0 };
     segment kernel_code_desc = { 0, 0xFFFFF, 0x9A, 0xCF };
     segment kernel_data_desc = { 0, 0xFFFFF, 0x92, 0xCF };
     segment user_code_desc = { 0, 0xFFFFF, 0xFA, 0xCF };
     segment user_data_desc = { 0, 0xFFFFF, 0xF2, 0xCF };
-    segment tss_desc = { 0, 0, 0, 0 };
+    segment tss_desc = { (u32)&tss, sizeof(tss) - 1, 0x89, 0x00 };
 
     encodeGdtEntry(GDT[0].entry, null_desc);
     encodeGdtEntry(GDT[1].entry, kernel_code_desc);
@@ -71,6 +78,8 @@ void init_gdt()
                  :
                  :
                  : "ax");
+
+    asm volatile("ltr %%ax" : : "a"((u16)0x28));
 
     printf("GDT init successful\n");
 }

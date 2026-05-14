@@ -38,11 +38,28 @@
 #include "syscall.h"
 #include "timer.h"
 
-void main_main(unsigned long magic, multiboot_info_t* info)
+void jump_usermode(void* entry, void* stack_pointer)
 {
-    (void)magic;
+    asm volatile("mov $0x23, %%ax\n"
+                 "mov %%ax, %%ds\n"
+                 "mov %%ax, %%es\n"
+                 "mov %%ax, %%fs\n"
+                 "mov %%ax, %%gs\n"
+                 "push $0x23\n"
+                 "push %1\n"
+                 "pushf\n"
+                 "push $0x1B\n"
+                 "push %0\n"
+                 "iret\n"
+                 :
+                 : "r"(entry), "r"(stack_pointer)
+                 : "eax");
+}
+
+void main_main(void* stack_end, multiboot_info_t* info)
+{
     init_serial();
-    init_gdt();
+    init_gdt(stack_end);
     timer_init();
     idt_init();
     syscall_table_init();
@@ -78,7 +95,11 @@ void main_main(unsigned long magic, multiboot_info_t* info)
     printf("Game load successful\n");
 
     void (*entry)(void) = (void (*)(void))elf_header->e_entry;
-    entry();
+
+    void* stack_userland_start = memory_reserve(0x4000);
+    void* stack_userland = (char*)stack_userland_start + 0x4000;
+
+    jump_usermode(entry, stack_userland);
 }
 
 void k_main(unsigned long magic, multiboot_info_t* info)
@@ -94,5 +115,5 @@ void k_main(unsigned long magic, multiboot_info_t* info)
                  :
                  : "r"(stack_end));
 
-    main_main(magic, info);
+    main_main(stack_end, info);
 }
