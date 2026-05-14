@@ -31,6 +31,7 @@ handler_function handler_table[NR_SYSCALL];
 
 void handleSyscall(interrupt_frame_t* frame)
 {
+    // printf("syscall %d\n", frame->eax);
     if (frame->eax >= NR_SYSCALL)
     {
         frame->eax = -1;
@@ -55,7 +56,7 @@ void syscall_table_init()
 
     syscall_register(SYSCALL_WRITE, sys_write);
     syscall_register(SYSCALL_SBRK, sys_sbrk);
-    syscall_register(SYSCALL_GETKEY, sys_getkey);
+    // syscall_register(SYSCALL_GETKEY, sys_getkey);
     syscall_register(SYSCALL_GETTICK, sys_gettick);
     syscall_register(SYSCALL_OPEN, sys_open);
     syscall_register(SYSCALL_READ, sys_read);
@@ -94,6 +95,8 @@ u32 sys_write(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
+    printf("write params %s\n", ebx);
+
     write_serial(ebx);
     return 0;
 }
@@ -104,6 +107,8 @@ u32 sys_sbrk(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
+    printf("sbrk params %d\n", ebx);
+
     return (u32)sbrk(ebx);
 }
 
@@ -113,7 +118,7 @@ u32 sys_getkey(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    return getkey();
+    return 42;
 }
 
 u32 sys_gettick(u32 ebx, u32 ecx, u32 edx)
@@ -129,23 +134,36 @@ u32 sys_open(u32 ebx, u32 ecx, u32 edx)
 {
     (void)edx;
 
-    return open((const char*)ebx, ecx);
+    printf("open params %s, %d, %d\n", ebx, ecx, edx);
+
+    int fd = open((const char*)ebx, ecx);
+
+    printf("fd %d\n", fd);
+    return fd;
 }
 
 u32 sys_read(u32 ebx, u32 ecx, u32 edx)
 {
+    printf("read params %d, %d, %d\n", ebx, ecx, edx);
     return read(ebx, (void*)ecx, edx);
 }
 
 u32 sys_lseek(u32 ebx, u32 ecx, u32 edx)
 {
-    return seek(ebx, ecx, edx);
+    printf("seek params %d, %d, %d\n", ebx, ecx, edx);
+    int res = seek(ebx, ecx, edx);
+
+    printf("seek offset %d\n", res);
+
+    return res;
 }
 
 u32 sys_close(u32 ebx, u32 ecx, u32 edx)
 {
     (void)ecx;
     (void)edx;
+
+    printf("close fd%d\n", ebx);
 
     return close(ebx);
 }
@@ -154,6 +172,8 @@ u32 sys_setvideo(u32 ebx, u32 ecx, u32 edx)
 {
     (void)ecx;
     (void)edx;
+
+    printf("setvideo params %d\n", ebx);
 
     return setvideo(ebx);
 }

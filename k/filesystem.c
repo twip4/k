@@ -7,7 +7,7 @@
 #include "atapi.h"
 #include "k/iso9660.h"
 
-static struct fd_entry fd_tab[16];
+static struct fd_entry fd_tab[64];
 
 int split_path(const char* path, char parts[64][64])
 {
@@ -67,6 +67,8 @@ int find(u32 root_lba, u32 root_size, const char* filename, struct iso_dir* out)
             if (strncasecmp(d->idf, filename, len) == 0
                 && strlen(filename) == len)
             {
+                printf("found: %.*s size=%d lba=%d\n", d->idf_len, d->idf,
+                       d->file_size.le, d->data_blk.le);
                 memcpy(out, d, sizeof(struct iso_dir));
                 return 1;
             }
@@ -85,6 +87,9 @@ int open(const char* path, int flags)
 {
     (void)flags;
 
+    if (!path || path[0] == '\0')
+        return -1;
+
     struct iso_prim_voldesc pvd_copy;
     memcpy(&pvd_copy, read_block(ISO_PRIM_VOLDESC_BLOCK), sizeof(pvd_copy));
 
@@ -93,6 +98,9 @@ int open(const char* path, int flags)
 
     char file_path[64][64];
     int n = split_path(path, file_path);
+
+    if (n == 0)
+        return -1;
 
     for (int i = 0; i < n; i++)
     {
@@ -105,7 +113,7 @@ int open(const char* path, int flags)
         root_size = entry_copy.file_size.le;
     }
 
-    for (int fd = 0; fd < 16; fd++)
+    for (int fd = 0; fd < 64; fd++)
     {
         if (!fd_tab[fd].active)
         {
@@ -151,26 +159,41 @@ ssize_t read(int fd, void* buf, size_t count)
 
 off_t seek(int fd, off_t offset, int whence)
 {
+    if (fd < 0 || fd > 64)
+        return -1;
+
+    int tmp;
+
     switch (whence)
     {
     case SEEK_SET:
-        fd_tab[fd].cursor = offset;
+        tmp = offset;
         break;
     case SEEK_CUR:
-        fd_tab[fd].cursor = (off_t)fd_tab[fd].cursor + offset;
+        tmp = (off_t)fd_tab[fd].cursor + offset;
         break;
     case SEEK_END:
-        fd_tab[fd].cursor = (off_t)fd_tab[fd].size + offset;
+        tmp = (off_t)fd_tab[fd].size + offset;
         break;
     default:
         return (off_t)-1;
     }
+
+    if (tmp < 0)
+    {
+        return (off_t)-1;
+    }
+
+    fd_tab[fd].cursor = tmp;
 
     return fd_tab[fd].cursor;
 }
 
 int close(int fd)
 {
+    if (fd < 0 || fd > 64)
+        return -1;
+
     fd_tab[fd].active = 0;
 
     return 0;

@@ -1,0 +1,4379 @@
+GDT init successful
+IDT init successful
+Syscall init successful
+Heap init successful
+kernle start
+found: BIN size=2048 lba=21
+found: DOOM.;1 size=323420 lba=13563
+Game load successful
+open params /usr/doom//roms/doom.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+fd -1
+open params /usr/doom//roms/doom2.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+fd -1
+open params /usr/doom//roms/tnt.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+fd -1
+open params /usr/doom//roms/plutonia.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+fd -1
+open params /usr/doom//roms/doom1.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+found: DOOM1.WAD;1 size=4196020 lba=14211
+fd 1
+close fd1
+open params /usr/doom//roms/doomu.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+fd -1
+open params /usr/doom//roms/heretic.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+fd -1
+open params /usr/doom//roms/hexen.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+fd -1
+open params /usr/doom//roms/hexdd.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+fd -1
+open params /usr/doom//roms/strife1.wad, 0, 1154272
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+fd -1
+sbrk params 0
+sbrk params 8180
+write params                             DOOM Shareware Startup v1.10                           
+
+Ğwrite params V_Init: allocate screens.
+
+Ğsbrk params 249856
+write params M_LoadDefaults: Load system defaults.
+
+Ğopen params , 0, 19
+fd -1
+write params Z_Init: Init zone memory allocation daemon. 
+
+Ğsbrk params 6291456
+write params W_Init: Init WADfiles.
+
+Ğopen params /usr/doom//roms/doom1.wad, 0, 19
+found: USR size=2048 lba=96
+found: DOOM size=2048 lba=97
+found: ROMS size=2048 lba=98
+found: DOOM1.WAD;1 size=4196020 lba=14211
+fd 1
+write params  adding /usr/doom//roms/doom1.wad
+
+Pread params 1, 1154436, 12
+seek params 1, 4175796, 0
+seek offset 4175796
+sbrk params 24576
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+read params 1, 1154448, 16
+sbrk params 4096
+write params ===========================================================================
+                                Shareware!
+===========================================================================
+
+Ğwrite params M_Init: Init miscellaneous info.
+
+Ğwrite params R_Init: Init DOOM refresh daemon - 
+Ğseek params 1, 924948, 0
+seek offset 924948
+read params 1, 1411192, 2804
+seek params 1, 915712, 0
+seek offset 915712
+read params 1, 1411192, 9234
+write params [
+°write params  
+°write params  
+°write params  
+°write params  
+°write params  
+°write params  
+°write params  
+°write params  
+°write params  
+°write params  
+°write params          ]
+°write params 
+°write params 
+°write params 
+°write params 
+°write params 
+°write params 
+°write params 
+°write params 
+°write params 
+°write params 
+°write params 
+°write params .
+°write params .
+°seek params 1, 3203576, 0
+seek offset 3203576
+read params 1, 1485400, 2520
+seek params 1, 3269912, 0
+seek offset 3269912
+read params 1, 1487944, 5192
+seek params 1, 3820860, 0
+seek offset 3820860
+read params 1, 1493160, 10088
+seek params 1, 3830948, 0
+seek offset 3830948
+read params 1, 1503272, 17544
+seek params 1, 3863884, 0
+seek offset 3863884
+read params 1, 1520840, 17544
+seek params 1, 3492172, 0
+seek offset 3492172
+read params 1, 1538408, 14312
+seek params 1, 3506484, 0
+seek offset 3506484
+read params 1, 1552744, 4276
+seek params 1, 3510760, 0
+seek offset 3510760
+read params 1, 1557044, 4212
+seek params 1, 3449624, 0
+seek offset 3449624
+read params 1, 1561280, 8776
+seek params 1, 3908088, 0
+seek offset 3908088
+read params 1, 1570080, 1924
+seek params 1, 3432080, 0
+seek offset 3432080
+read params 1, 1572028, 17544
+seek params 1, 3475944, 0
+seek offset 3475944
+read params 1, 1589596, 3984
+seek params 1, 3479928, 0
+seek offset 3479928
+read params 1, 1593604, 3984
+seek params 1, 3483912, 0
+seek offset 3483912
+read params 1, 1597612, 3940
+seek params 1, 3489952, 0
+seek offset 3489952
+read params 1, 1601576, 2220
+seek params 1, 3487852, 0
+seek offset 3487852
+read params 1, 1603820, 2100
+seek params 1, 3237016, 0
+seek offset 3237016
+read params 1, 1605944, 5192
+seek params 1, 3242208, 0
+seek offset 3242208
+read params 1, 1611160, 1952
+seek params 1, 3231824, 0
+seek offset 3231824
+read params 1, 1613136, 5192
+seek params 1, 3206096, 0
+seek offset 3206096
+read params 1, 1618352, 2520
+seek params 1, 3208616, 0
+seek offset 3208616
+read params 1, 1620896, 2520
+seek params 1, 3211136, 0
+seek offset 3211136
+read params 1, 1623440, 2520
+seek params 1, 3213656, 0
+seek offset 3213656
+read params 1, 1625984, 2520
+seek params 1, 3249352, 0
+seek offset 3249352
+read params 1, 1628528, 5192
+seek params 1, 3682692, 0
+seek offset 3682692
+read params 1, 1633744, 17544
+seek params 1, 3660820, 0
+seek offset 3660820
+read params 1, 1651312, 552
+seek params 1, 3265744, 0
+seek offset 3265744
+read params 1, 1651888, 4168
+seek params 1, 3736020, 0
+seek offset 3736020
+read params 1, 1656080, 4168
+seek params 1, 3740188, 0
+seek offset 3740188
+read params 1, 1660272, 4168
+seek params 1, 3748524, 0
+seek offset 3748524
+read params 1, 1664464, 4168
+seek params 1, 3744356, 0
+seek offset 3744356
+read params 1, 1668656, 4168
+seek params 1, 3756860, 0
+seek offset 3756860
+read params 1, 1672848, 4168
+seek params 1, 3765196, 0
+seek offset 3765196
+read params 1, 1677040, 4168
+seek params 1, 3761028, 0
+seek offset 3761028
+read params 1, 1681232, 4168
+seek params 1, 3752692, 0
+seek offset 3752692
+read params 1, 1685424, 4168
+seek params 1, 3661372, 0
+seek offset 3661372
+read params 1, 1689616, 552
+seek params 1, 3774044, 0
+seek offset 3774044
+read params 1, 1690192, 2344
+seek params 1, 3637860, 0
+seek offset 3637860
+read params 1, 1692560, 10376
+seek params 1, 3617252, 0
+seek offset 3617252
+read params 1, 1702960, 8776
+seek params 1, 3648236, 0
+seek offset 3648236
+read params 1, 1711760, 10376
+seek params 1, 3802140, 0
+seek offset 3802140
+read params 1, 1722160, 4680
+seek params 1, 3816180, 0
+seek offset 3816180
+read params 1, 1726864, 4680
+seek params 1, 3785756, 0
+seek offset 3785756
+read params 1, 1731568, 2344
+seek params 1, 3806820, 0
+seek offset 3806820
+read params 1, 1733936, 4680
+seek params 1, 3811500, 0
+seek offset 3811500
+read params 1, 1738640, 4680
+seek params 1, 3797460, 0
+seek offset 3797460
+read params 1, 1743344, 4680
+seek params 1, 3776388, 0
+seek offset 3776388
+read params 1, 1748048, 4680
+seek params 1, 3792780, 0
+seek offset 3792780
+read params 1, 1752752, 4680
+seek params 1, 3783412, 0
+seek offset 3783412
+read params 1, 1757456, 2344
+seek params 1, 3769364, 0
+seek offset 3769364
+read params 1, 1759824, 4680
+seek params 1, 3781068, 0
+seek offset 3781068
+read params 1, 1764528, 2344
+seek params 1, 3721428, 0
+seek offset 3721428
+read params 1, 1766896, 3648
+seek params 1, 3717780, 0
+seek offset 3717780
+read params 1, 1770568, 3648
+seek params 1, 3395256, 0
+seek offset 3395256
+read params 1, 1774240, 1096
+seek params 1, 3732372, 0
+seek offset 3732372
+read params 1, 1775360, 3648
+seek params 1, 3725076, 0
+seek offset 3725076
+read params 1, 1779032, 3648
+seek params 1, 3728724, 0
+seek offset 3728724
+read params 1, 1782704, 3648
+seek params 1, 3523756, 0
+seek offset 3523756
+read params 1, 1786376, 4392
+seek params 1, 3528148, 0
+seek offset 3528148
+read params 1, 1790792, 4392
+seek params 1, 3244160, 0
+seek offset 3244160
+read params 1, 1795208, 5192
+seek params 1, 3848492, 0
+seek offset 3848492
+read params 1, 1800424, 5192
+seek params 1, 3396352, 0
+seek offset 3396352
+read params 1, 1805640, 208
+seek params 1, 3396560, 0
+seek offset 3396560
+read params 1, 1805872, 208
+seek params 1, 3681588, 0
+seek offset 3681588
+read params 1, 1806104, 1104
+seek params 1, 3862780, 0
+seek offset 3862780
+read params 1, 1807232, 1104
+seek params 1, 3396768, 0
+seek offset 3396768
+read params 1, 1808360, 208
+seek params 1, 3857588, 0
+seek offset 3857588
+read params 1, 1808592, 5192
+seek params 1, 3853684, 0
+seek offset 3853684
+read params 1, 1813808, 1952
+seek params 1, 3855636, 0
+seek offset 3855636
+read params 1, 1815784, 1952
+seek params 1, 3607172, 0
+seek offset 3607172
+read params 1, 1817760, 1304
+seek params 1, 3663028, 0
+seek offset 3663028
+read params 1, 1819088, 808
+seek params 1, 3663836, 0
+seek offset 3663836
+read params 1, 1819920, 208
+seek params 1, 3385896, 0
+seek offset 3385896
+read params 1, 1820152, 4680
+seek params 1, 3390576, 0
+seek offset 3390576
+read params 1, 1824856, 4680
+seek params 1, 3381216, 0
+seek offset 3381216
+read params 1, 1829560, 4680
+seek params 1, 3376536, 0
+seek offset 3376536
+read params 1, 1834264, 4680
+seek params 1, 3191000, 0
+seek offset 3191000
+read params 1, 1838968, 10056
+seek params 1, 3201056, 0
+seek offset 3201056
+read params 1, 1849048, 2520
+seek params 1, 3885516, 0
+seek offset 3885516
+read params 1, 1851592, 1716
+seek params 1, 3882964, 0
+seek offset 3882964
+read params 1, 1853332, 144
+seek params 1, 3883108, 0
+seek offset 3883108
+read params 1, 1853500, 144
+seek params 1, 3883252, 0
+seek offset 3883252
+read params 1, 1853668, 144
+seek params 1, 3626028, 0
+seek offset 3626028
+read params 1, 1853836, 1104
+seek params 1, 3276408, 0
+seek offset 3276408
+read params 1, 1854964, 1304
+seek params 1, 3275104, 0
+seek offset 3275104
+read params 1, 1856292, 1304
+seek params 1, 3882532, 0
+seek offset 3882532
+read params 1, 1857620, 144
+seek params 1, 3882676, 0
+seek offset 3882676
+read params 1, 1857788, 144
+seek params 1, 3882820, 0
+seek offset 3882820
+read params 1, 1857956, 144
+seek params 1, 3254544, 0
+seek offset 3254544
+read params 1, 1858124, 4680
+seek params 1, 3883396, 0
+seek offset 3883396
+read params 1, 1862828, 2120
+seek params 1, 3260528, 0
+seek offset 3260528
+read params 1, 1864972, 1304
+seek params 1, 3261832, 0
+seek offset 3261832
+read params 1, 1866300, 1304
+seek params 1, 3263136, 0
+seek offset 3263136
+read params 1, 1867628, 1304
+seek params 1, 3259224, 0
+seek offset 3259224
+read params 1, 1868956, 1304
+seek params 1, 3264440, 0
+seek offset 3264440
+read params 1, 1870284, 1304
+seek params 1, 3396976, 0
+seek offset 3396976
+read params 1, 1871612, 8776
+seek params 1, 3700236, 0
+seek offset 3700236
+read params 1, 1880412, 17544
+seek params 1, 3608476, 0
+seek offset 3608476
+read params 1, 1897980, 8776
+seek params 1, 3887232, 0
+seek offset 3887232
+read params 1, 1906780, 3476
+seek params 1, 3890708, 0
+seek offset 3890708
+read params 1, 1910280, 3476
+seek params 1, 3894184, 0
+seek offset 3894184
+read params 1, 1913780, 3476
+seek params 1, 3897660, 0
+seek offset 3897660
+read params 1, 1917280, 3476
+seek params 1, 3901136, 0
+seek offset 3901136
+read params 1, 1920780, 3476
+seek params 1, 3904612, 0
+seek offset 3904612
+read params 1, 1924280, 3476
+seek params 1, 3664044, 0
+seek offset 3664044
+read params 1, 1927780, 17544
+seek params 1, 3277712, 0
+seek offset 3277712
+read params 1, 1945348, 5192
+seek params 1, 3282904, 0
+seek offset 3282904
+read params 1, 1950564, 5192
+seek params 1, 3919532, 0
+seek offset 3919532
+read params 1, 1955780, 35080
+seek params 1, 3627132, 0
+seek offset 3627132
+read params 1, 1990884, 8776
+seek params 1, 3405752, 0
+seek offset 3405752
+read params 1, 1999684, 8776
+seek params 1, 3414528, 0
+seek offset 3414528
+read params 1, 2008484, 8776
+seek params 1, 3423304, 0
+seek offset 3423304
+read params 1, 2017284, 8776
+seek params 1, 3532540, 0
+seek offset 3532540
+read params 1, 2026084, 4392
+seek params 1, 3536932, 0
+seek offset 3536932
+read params 1, 2030500, 4392
+seek params 1, 3567660, 0
+seek offset 3567660
+read params 1, 2034916, 8776
+seek params 1, 3576436, 0
+seek offset 3576436
+read params 1, 2043716, 8776
+seek params 1, 3514972, 0
+seek offset 3514972
+read params 1, 2052516, 4392
+seek params 1, 3519364, 0
+seek offset 3519364
+read params 1, 2056932, 4392
+seek params 1, 3541324, 0
+seek offset 3541324
+read params 1, 2061348, 4392
+seek params 1, 3545716, 0
+seek offset 3545716
+read params 1, 2065764, 4392
+seek params 1, 3585212, 0
+seek offset 3585212
+read params 1, 2070180, 4392
+seek params 1, 3589604, 0
+seek offset 3589604
+read params 1, 2074596, 4392
+seek params 1, 3593996, 0
+seek offset 3593996
+read params 1, 2079012, 4392
+seek params 1, 3602780, 0
+seek offset 3602780
+read params 1, 2083428, 4392
+seek params 1, 3550108, 0
+seek offset 3550108
+read params 1, 2087844, 8776
+seek params 1, 3558884, 0
+seek offset 3558884
+read params 1, 2096644, 8776
+seek params 1, 3659164, 0
+seek offset 3659164
+read params 1, 2105444, 552
+seek params 1, 3658612, 0
+seek offset 3658612
+read params 1, 2106020, 552
+seek params 1, 3659716, 0
+seek offset 3659716
+read params 1, 2106596, 552
+seek params 1, 3660268, 0
+seek offset 3660268
+read params 1, 2107172, 552
+seek params 1, 3661924, 0
+seek offset 3661924
+read params 1, 2107748, 552
+seek params 1, 3662476, 0
+seek offset 3662476
+read params 1, 2108324, 552
+seek params 1, 3216176, 0
+seek offset 3216176
+read params 1, 2108900, 1304
+seek params 1, 3217480, 0
+seek offset 3217480
+read params 1, 2110228, 1304
+seek params 1, 3218784, 0
+seek offset 3218784
+read params 1, 2111556, 1304
+seek params 1, 3220088, 0
+seek offset 3220088
+read params 1, 2112884, 1304
+seek params 1, 3221392, 0
+seek offset 3221392
+read params 1, 2114212, 1304
+seek params 1, 3222696, 0
+seek offset 3222696
+read params 1, 2115540, 1304
+seek params 1, 3224000, 0
+seek offset 3224000
+read params 1, 2116868, 1304
+seek params 1, 3225304, 0
+seek offset 3225304
+read params 1, 2118196, 1304
+seek params 1, 3226608, 0
+seek offset 3226608
+read params 1, 2119524, 1304
+seek params 1, 3227912, 0
+seek offset 3227912
+read params 1, 2120852, 1304
+seek params 1, 3229216, 0
+seek offset 3229216
+read params 1, 2122180, 1304
+seek params 1, 3230520, 0
+seek offset 3230520
+read params 1, 2123508, 1304
+seek params 1, 3367176, 0
+seek offset 3367176
+read params 1, 2124836, 4680
+seek params 1, 3353136, 0
+seek offset 3353136
+read params 1, 2129540, 4680
+seek params 1, 3362496, 0
+seek offset 3362496
+read params 1, 2134244, 4680
+seek params 1, 3357816, 0
+seek offset 3357816
+read params 1, 2138948, 4680
+seek params 1, 3635908, 0
+seek offset 3635908
+read params 1, 2143652, 1952
+seek params 1, 3910012, 0
+seek offset 3910012
+read params 1, 2145628, 1320
+seek params 1, 3915292, 0
+seek offset 3915292
+read params 1, 2146972, 1320
+seek params 1, 3917932, 0
+seek offset 3917932
+read params 1, 2148316, 800
+seek params 1, 3916612, 0
+seek offset 3916612
+read params 1, 2149140, 1320
+seek params 1, 3912652, 0
+seek offset 3912652
+read params 1, 2150484, 1320
+seek params 1, 3371856, 0
+seek offset 3371856
+read params 1, 2151828, 4680
+seek params 1, 3881980, 0
+seek offset 3881980
+read params 1, 2156532, 552
+seek params 1, 3911332, 0
+seek offset 3911332
+read params 1, 2157108, 1320
+seek params 1, 3918732, 0
+seek offset 3918732
+read params 1, 2158452, 800
+seek params 1, 3913972, 0
+seek offset 3913972
+read params 1, 2159276, 1320
+seek params 1, 3881428, 0
+seek offset 3881428
+read params 1, 2160620, 552
+seek params 1, 3288096, 0
+seek offset 3288096
+read params 1, 2161196, 28080
+seek params 1, 3316176, 0
+seek offset 3316176
+read params 1, 2189300, 36960
+seek params 1, 3458400, 0
+seek offset 3458400
+read params 1, 2226284, 17544
+write params 
+InitTextures
+ write params 
+InitFlats
+ write params .
+€seek params 1, 2365424, 0
+seek offset 2365424
+read params 1, 2250500, 8180
+seek params 1, 2373604, 0
+seek offset 2373604
+read params 1, 2258704, 8204
+seek params 1, 2381808, 0
+seek offset 2381808
+read params 1, 2266932, 2684
+seek params 1, 2384492, 0
+seek offset 2384492
+read params 1, 2269640, 2308
+seek params 1, 2386800, 0
+seek offset 2386800
+read params 1, 2271972, 6692
+seek params 1, 2393492, 0
+seek offset 2393492
+read params 1, 2278688, 6692
+seek params 1, 2400184, 0
+seek offset 2400184
+read params 1, 2285404, 7852
+seek params 1, 2408036, 0
+seek offset 2408036
+read params 1, 2293280, 7980
+seek params 1, 2416016, 0
+seek offset 2416016
+read params 1, 2301284, 2632
+seek params 1, 2418648, 0
+seek offset 2418648
+read params 1, 2303940, 3768
+seek params 1, 2422416, 0
+seek offset 2422416
+read params 1, 2307732, 3664
+seek params 1, 2426080, 0
+seek offset 2426080
+read params 1, 2311420, 3616
+seek params 1, 2429696, 0
+seek offset 2429696
+read params 1, 2315060, 4892
+seek params 1, 2434588, 0
+seek offset 2434588
+read params 1, 2319976, 1408
+seek params 1, 2435996, 0
+seek offset 2435996
+read params 1, 2321408, 320
+seek params 1, 2436316, 0
+seek offset 2436316
+read params 1, 2321752, 320
+seek params 1, 2436636, 0
+seek offset 2436636
+read params 1, 2322096, 1316
+seek params 1, 2437952, 0
+seek offset 2437952
+read params 1, 2323436, 1624
+seek params 1, 2439576, 0
+seek offset 2439576
+read params 1, 2325084, 2064
+seek params 1, 2441640, 0
+seek offset 2441640
+read params 1, 2327172, 76
+seek params 1, 2441716, 0
+seek offset 2441716
+read params 1, 2327272, 144
+seek params 1, 2441860, 0
+seek offset 2441860
+read params 1, 2327440, 256
+seek params 1, 2442116, 0
+seek offset 2442116
+read params 1, 2327720, 376
+seek params 1, 2442492, 0
+seek offset 2442492
+read params 1, 2328120, 76
+seek params 1, 2442568, 0
+seek offset 2442568
+read params 1, 2328220, 132
+seek params 1, 2442700, 0
+seek offset 2442700
+read params 1, 2328376, 216
+seek params 1, 2442916, 0
+seek offset 2442916
+read params 1, 2328616, 340
+seek params 1, 2443256, 0
+seek offset 2443256
+read params 1, 2328980, 316
+seek params 1, 2443572, 0
+seek offset 2443572
+read params 1, 2329320, 1884
+seek params 1, 2445456, 0
+seek offset 2445456
+read params 1, 2331228, 2360
+seek params 1, 2447816, 0
+seek offset 2447816
+read params 1, 2333612, 2228
+seek params 1, 2450044, 0
+seek offset 2450044
+read params 1, 2335864, 3788
+seek params 1, 2453832, 0
+seek offset 2453832
+read params 1, 2339676, 5976
+seek params 1, 2459808, 0
+seek offset 2459808
+read params 1, 2345676, 4260
+seek params 1, 2464068, 0
+seek offset 2464068
+read params 1, 2349960, 2184
+seek params 1, 2466252, 0
+seek offset 2466252
+read params 1, 2352168, 1696
+seek params 1, 2467948, 0
+seek offset 2467948
+read params 1, 2353888, 1396
+seek params 1, 2469344, 0
+seek offset 2469344
+read params 1, 2355308, 1020
+seek params 1, 2470364, 0
+seek offset 2470364
+read params 1, 2356352, 392
+seek params 1, 2470756, 0
+seek offset 2470756
+read params 1, 2356768, 152
+seek params 1, 2470908, 0
+seek offset 2470908
+read params 1, 2356944, 44
+seek params 1, 2470952, 0
+seek offset 2470952
+read params 1, 2357012, 88
+seek params 1, 2471040, 0
+seek offset 2471040
+read params 1, 2357124, 176
+seek params 1, 2471216, 0
+seek offset 2471216
+read params 1, 2357324, 260
+seek params 1, 2471476, 0
+seek offset 2471476
+read params 1, 2357608, 1396
+seek params 1, 2472872, 0
+seek offset 2472872
+read params 1, 2359028, 1052
+seek params 1, 2473924, 0
+seek offset 2473924
+read params 1, 2360104, 388
+seek params 1, 2474312, 0
+seek offset 2474312
+read params 1, 2360516, 144
+seek params 1, 2474456, 0
+seek offset 2474456
+read params 1, 2360684, 44
+seek params 1, 2474500, 0
+seek offset 2474500
+read params 1, 2360752, 244
+seek params 1, 2474744, 0
+seek offset 2474744
+read params 1, 2361020, 256
+seek params 1, 2475000, 0
+seek offset 2475000
+read params 1, 2361300, 628
+seek params 1, 2475628, 0
+seek offset 2475628
+read params 1, 2361952, 1236
+seek params 1, 2476864, 0
+seek offset 2476864
+read params 1, 2363212, 872
+seek params 1, 2477736, 0
+seek offset 2477736
+read params 1, 2364108, 460
+seek params 1, 2478196, 0
+seek offset 2478196
+read params 1, 2364592, 108
+seek params 1, 2478304, 0
+seek offset 2478304
+read params 1, 2364724, 1104
+seek params 1, 2479408, 0
+seek offset 2479408
+read params 1, 2365852, 1328
+seek params 1, 2480736, 0
+seek offset 2480736
+read params 1, 2367204, 1588
+seek params 1, 2482324, 0
+seek offset 2482324
+read params 1, 2368816, 1344
+seek params 1, 2483668, 0
+seek offset 2483668
+read params 1, 2370184, 944
+seek params 1, 2484612, 0
+seek offset 2484612
+read params 1, 2371152, 1092
+seek params 1, 2485704, 0
+seek offset 2485704
+read params 1, 2372268, 1332
+seek params 1, 2487036, 0
+seek offset 2487036
+read params 1, 2373624, 1588
+write params .
+€seek params 1, 2488624, 0
+seek offset 2488624
+read params 1, 2375236, 1232
+seek params 1, 2489856, 0
+seek offset 2489856
+read params 1, 2376492, 756
+seek params 1, 2490612, 0
+seek offset 2490612
+read params 1, 2377272, 1396
+seek params 1, 2492008, 0
+seek offset 2492008
+read params 1, 2378692, 1444
+seek params 1, 2493452, 0
+seek offset 2493452
+read params 1, 2380160, 1308
+seek params 1, 2494760, 0
+seek offset 2494760
+read params 1, 2381492, 1368
+seek params 1, 2496128, 0
+seek offset 2496128
+read params 1, 2382884, 3112
+seek params 1, 2499240, 0
+seek offset 2499240
+read params 1, 2386020, 2596
+seek params 1, 2501836, 0
+seek offset 2501836
+read params 1, 2388640, 4152
+seek params 1, 2505988, 0
+seek offset 2505988
+read params 1, 2392816, 6716
+seek params 1, 2512704, 0
+seek offset 2512704
+read params 1, 2399556, 5976
+seek params 1, 2518680, 0
+seek offset 2518680
+read params 1, 2405556, 6588
+seek params 1, 2525268, 0
+seek offset 2525268
+read params 1, 2412168, 1624
+seek params 1, 2526892, 0
+seek offset 2526892
+read params 1, 2413816, 3208
+seek params 1, 2530100, 0
+seek offset 2530100
+read params 1, 2417048, 4792
+seek params 1, 2534892, 0
+seek offset 2534892
+read params 1, 2421864, 4496
+seek params 1, 2539388, 0
+seek offset 2539388
+read params 1, 2426384, 264
+seek params 1, 2539652, 0
+seek offset 2539652
+read params 1, 2426672, 600
+seek params 1, 2540252, 0
+seek offset 2540252
+read params 1, 2427296, 892
+seek params 1, 2541144, 0
+seek offset 2541144
+read params 1, 2428212, 484
+seek params 1, 2541628, 0
+seek offset 2541628
+read params 1, 2428720, 264
+seek params 1, 2541892, 0
+seek offset 2541892
+read params 1, 2429008, 3400
+seek params 1, 2545292, 0
+seek offset 2545292
+read params 1, 2432432, 8860
+seek params 1, 2554152, 0
+seek offset 2554152
+read params 1, 2441316, 10368
+seek params 1, 2564520, 0
+seek offset 2564520
+read params 1, 2451708, 10668
+seek params 1, 2575188, 0
+seek offset 2575188
+read params 1, 2462400, 1156
+seek params 1, 2576344, 0
+seek offset 2576344
+read params 1, 2463580, 1668
+seek params 1, 2578012, 0
+seek offset 2578012
+read params 1, 2465272, 2000
+seek params 1, 2580012, 0
+seek offset 2580012
+read params 1, 2467296, 2384
+seek params 1, 2582396, 0
+seek offset 2582396
+read params 1, 2469704, 2388
+seek params 1, 2584784, 0
+seek offset 2584784
+read params 1, 2472116, 2160
+seek params 1, 2586944, 0
+seek offset 2586944
+read params 1, 2474300, 1640
+seek params 1, 2588584, 0
+seek offset 2588584
+read params 1, 2475964, 2080
+seek params 1, 2590664, 0
+seek offset 2590664
+read params 1, 2478068, 2040
+seek params 1, 2592704, 0
+seek offset 2592704
+read params 1, 2480132, 2164
+seek params 1, 2594868, 0
+seek offset 2594868
+read params 1, 2482320, 2056
+seek params 1, 2596924, 0
+seek offset 2596924
+read params 1, 2484400, 1848
+seek params 1, 2598772, 0
+seek offset 2598772
+read params 1, 2486272, 1996
+seek params 1, 2600768, 0
+seek offset 2600768
+read params 1, 2488292, 2172
+seek params 1, 2602940, 0
+seek offset 2602940
+read params 1, 2490488, 2288
+seek params 1, 2605228, 0
+seek offset 2605228
+read params 1, 2492800, 1988
+seek params 1, 2607216, 0
+seek offset 2607216
+read params 1, 2494812, 1640
+seek params 1, 2608856, 0
+seek offset 2608856
+read params 1, 2496476, 2080
+seek params 1, 2610936, 0
+seek offset 2610936
+read params 1, 2498580, 2144
+seek params 1, 2613080, 0
+seek offset 2613080
+read params 1, 2500748, 2176
+seek params 1, 2615256, 0
+seek offset 2615256
+read params 1, 2502948, 1832
+seek params 1, 2617088, 0
+seek offset 2617088
+read params 1, 2504804, 1848
+seek params 1, 2618936, 0
+seek offset 2618936
+read params 1, 2506676, 2144
+seek params 1, 2621080, 0
+seek offset 2621080
+read params 1, 2508844, 1920
+seek params 1, 2623000, 0
+seek offset 2623000
+read params 1, 2510788, 2232
+seek params 1, 2625232, 0
+seek offset 2625232
+read params 1, 2513044, 2028
+seek params 1, 2627260, 0
+seek offset 2627260
+read params 1, 2515096, 1844
+seek params 1, 2629104, 0
+seek offset 2629104
+read params 1, 2516964, 1816
+seek params 1, 2630920, 0
+seek offset 2630920
+read params 1, 2518804, 2336
+seek params 1, 2633256, 0
+seek offset 2633256
+read params 1, 2521164, 2216
+seek params 1, 2635472, 0
+seek offset 2635472
+read params 1, 2523404, 2148
+seek params 1, 2637620, 0
+seek offset 2637620
+read params 1, 2525576, 2124
+seek params 1, 2639744, 0
+seek offset 2639744
+read params 1, 2527724, 2560
+seek params 1, 2642304, 0
+seek offset 2642304
+read params 1, 2530308, 2144
+seek params 1, 2644448, 0
+seek offset 2644448
+read params 1, 2532476, 1976
+seek params 1, 2646424, 0
+seek offset 2646424
+read params 1, 2534476, 1964
+seek params 1, 2648388, 0
+seek offset 2648388
+read params 1, 2536464, 2660
+seek params 1, 2651048, 0
+seek offset 2651048
+read params 1, 2539148, 2456
+seek params 1, 2653504, 0
+seek offset 2653504
+read params 1, 2541628, 2172
+write params .
+€seek params 1, 2655676, 0
+seek offset 2655676
+read params 1, 2543824, 2012
+seek params 1, 2657688, 0
+seek offset 2657688
+read params 1, 2545860, 2436
+seek params 1, 2660124, 0
+seek offset 2660124
+read params 1, 2548320, 2088
+seek params 1, 2662212, 0
+seek offset 2662212
+read params 1, 2550432, 2036
+seek params 1, 2664248, 0
+seek offset 2664248
+read params 1, 2552492, 1936
+seek params 1, 2666184, 0
+seek offset 2666184
+read params 1, 2554452, 2528
+seek params 1, 2668712, 0
+seek offset 2668712
+read params 1, 2557004, 2292
+seek params 1, 2671004, 0
+seek offset 2671004
+read params 1, 2559320, 2088
+seek params 1, 2673092, 0
+seek offset 2673092
+read params 1, 2561432, 1972
+seek params 1, 2675064, 0
+seek offset 2675064
+read params 1, 2563428, 2172
+seek params 1, 2677236, 0
+seek offset 2677236
+read params 1, 2565624, 2000
+seek params 1, 2679236, 0
+seek offset 2679236
+read params 1, 2567648, 1560
+seek params 1, 2680796, 0
+seek offset 2680796
+read params 1, 2569232, 1696
+seek params 1, 2682492, 0
+seek offset 2682492
+read params 1, 2570952, 2156
+seek params 1, 2684648, 0
+seek offset 2684648
+read params 1, 2573132, 2108
+seek params 1, 2686756, 0
+seek offset 2686756
+read params 1, 2575264, 2340
+seek params 1, 2689096, 0
+seek offset 2689096
+read params 1, 2577628, 2248
+seek params 1, 2691344, 0
+seek offset 2691344
+read params 1, 2579900, 1900
+seek params 1, 2693244, 0
+seek offset 2693244
+read params 1, 2581824, 1908
+seek params 1, 2695152, 0
+seek offset 2695152
+read params 1, 2583756, 1836
+seek params 1, 2696988, 0
+seek offset 2696988
+read params 1, 2585616, 1728
+seek params 1, 2698716, 0
+seek offset 2698716
+read params 1, 2587368, 1632
+seek params 1, 2700348, 0
+seek offset 2700348
+read params 1, 2589024, 1564
+seek params 1, 2701912, 0
+seek offset 2701912
+read params 1, 2590612, 1144
+seek params 1, 2703056, 0
+seek offset 2703056
+read params 1, 2591780, 1048
+seek params 1, 2704104, 0
+seek offset 2704104
+read params 1, 2592852, 1208
+seek params 1, 2705312, 0
+seek offset 2705312
+read params 1, 2594084, 1600
+seek params 1, 2706912, 0
+seek offset 2706912
+read params 1, 2595708, 1420
+seek params 1, 2708332, 0
+seek offset 2708332
+read params 1, 2597152, 1304
+seek params 1, 2709636, 0
+seek offset 2709636
+read params 1, 2598480, 1228
+seek params 1, 2710864, 0
+seek offset 2710864
+read params 1, 2599732, 1152
+seek params 1, 2712016, 0
+seek offset 2712016
+read params 1, 2600908, 1612
+seek params 1, 2713628, 0
+seek offset 2713628
+read params 1, 2602544, 1528
+seek params 1, 2715156, 0
+seek offset 2715156
+read params 1, 2604096, 1148
+seek params 1, 2716304, 0
+seek offset 2716304
+read params 1, 2605268, 1060
+seek params 1, 2717364, 0
+seek offset 2717364
+read params 1, 2606352, 1212
+seek params 1, 2718576, 0
+seek offset 2718576
+read params 1, 2607588, 1528
+seek params 1, 2720104, 0
+seek offset 2720104
+read params 1, 2609140, 1652
+seek params 1, 2721756, 0
+seek offset 2721756
+read params 1, 2610816, 1320
+seek params 1, 2723076, 0
+seek offset 2723076
+read params 1, 2612160, 1012
+seek params 1, 2724088, 0
+seek offset 2724088
+read params 1, 2613196, 1148
+seek params 1, 2725236, 0
+seek offset 2725236
+read params 1, 2614368, 1680
+seek params 1, 2726916, 0
+seek offset 2726916
+read params 1, 2616072, 1260
+seek params 1, 2728176, 0
+seek offset 2728176
+read params 1, 2617356, 1284
+seek params 1, 2729460, 0
+seek offset 2729460
+read params 1, 2618664, 1252
+seek params 1, 2730712, 0
+seek offset 2730712
+read params 1, 2619940, 1176
+seek params 1, 2731888, 0
+seek offset 2731888
+read params 1, 2621140, 1588
+seek params 1, 2733476, 0
+seek offset 2733476
+read params 1, 2622752, 1476
+seek params 1, 2734952, 0
+seek offset 2734952
+read params 1, 2624252, 1380
+seek params 1, 2736332, 0
+seek offset 2736332
+read params 1, 2625656, 1180
+seek params 1, 2737512, 0
+seek offset 2737512
+read params 1, 2626860, 1164
+seek params 1, 2738676, 0
+seek offset 2738676
+read params 1, 2628048, 1328
+seek params 1, 2740004, 0
+seek offset 2740004
+read params 1, 2629400, 1644
+seek params 1, 2741648, 0
+seek offset 2741648
+read params 1, 2631068, 1700
+seek params 1, 2743348, 0
+seek offset 2743348
+read params 1, 2632792, 1380
+seek params 1, 2744728, 0
+seek offset 2744728
+read params 1, 2634196, 1112
+seek params 1, 2745840, 0
+seek offset 2745840
+read params 1, 2635332, 1452
+seek params 1, 2747292, 0
+seek offset 2747292
+read params 1, 2636808, 1144
+seek params 1, 2748436, 0
+seek offset 2748436
+read params 1, 2637976, 1328
+seek params 1, 2749764, 0
+seek offset 2749764
+read params 1, 2639328, 1336
+seek params 1, 2751100, 0
+seek offset 2751100
+read params 1, 2640688, 1404
+seek params 1, 2752504, 0
+seek offset 2752504
+read params 1, 2642116, 1592
+seek params 1, 2754096, 0
+seek offset 2754096
+read params 1, 2643732, 1504
+seek params 1, 2755600, 0
+seek offset 2755600
+read params 1, 2645260, 1300
+write params .
+€seek params 1, 2756900, 0
+seek offset 2756900
+read params 1, 2646584, 1292
+seek params 1, 2758192, 0
+seek offset 2758192
+read params 1, 2647900, 1232
+seek params 1, 2759424, 0
+seek offset 2759424
+read params 1, 2649156, 2212
+seek params 1, 2761636, 0
+seek offset 2761636
+read params 1, 2651392, 2548
+seek params 1, 2764184, 0
+seek offset 2764184
+read params 1, 2653964, 2852
+seek params 1, 2767036, 0
+seek offset 2767036
+read params 1, 2656840, 2576
+seek params 1, 2769612, 0
+seek offset 2769612
+read params 1, 2659440, 2008
+seek params 1, 2771620, 0
+seek offset 2771620
+read params 1, 2661472, 1824
+seek params 1, 2773444, 0
+seek offset 2773444
+read params 1, 2663320, 1456
+seek params 1, 2774900, 0
+seek offset 2774900
+read params 1, 2664800, 1240
+seek params 1, 2776140, 0
+seek offset 2776140
+read params 1, 2666064, 2288
+seek params 1, 2778428, 0
+seek offset 2778428
+read params 1, 2668376, 2180
+seek params 1, 2780608, 0
+seek offset 2780608
+read params 1, 2670580, 2456
+seek params 1, 2783064, 0
+seek offset 2783064
+read params 1, 2673060, 2184
+seek params 1, 2785248, 0
+seek offset 2785248
+read params 1, 2675268, 2148
+seek params 1, 2787396, 0
+seek offset 2787396
+read params 1, 2677440, 2792
+seek params 1, 2790188, 0
+seek offset 2790188
+read params 1, 2680256, 2412
+seek params 1, 2792600, 0
+seek offset 2792600
+read params 1, 2682692, 2000
+seek params 1, 2794600, 0
+seek offset 2794600
+read params 1, 2684716, 2156
+seek params 1, 2796756, 0
+seek offset 2796756
+read params 1, 2686896, 2532
+seek params 1, 2799288, 0
+seek offset 2799288
+read params 1, 2689452, 2288
+seek params 1, 2801576, 0
+seek offset 2801576
+read params 1, 2691764, 2480
+seek params 1, 2804056, 0
+seek offset 2804056
+read params 1, 2694268, 2400
+seek params 1, 2806456, 0
+seek offset 2806456
+read params 1, 2696692, 2024
+seek params 1, 2808480, 0
+seek offset 2808480
+read params 1, 2698740, 2148
+seek params 1, 2810628, 0
+seek offset 2810628
+read params 1, 2700912, 2788
+seek params 1, 2813416, 0
+seek offset 2813416
+read params 1, 2703724, 2380
+seek params 1, 2815796, 0
+seek offset 2815796
+read params 1, 2706128, 2020
+seek params 1, 2817816, 0
+seek offset 2817816
+read params 1, 2708172, 2224
+seek params 1, 2820040, 0
+seek offset 2820040
+read params 1, 2710420, 2532
+seek params 1, 2822572, 0
+seek offset 2822572
+read params 1, 2712976, 2792
+seek params 1, 2825364, 0
+seek offset 2825364
+read params 1, 2715792, 2036
+seek params 1, 2827400, 0
+seek offset 2827400
+read params 1, 2717852, 2508
+seek params 1, 2829908, 0
+seek offset 2829908
+read params 1, 2720384, 2732
+seek params 1, 2832640, 0
+seek offset 2832640
+read params 1, 2723140, 2540
+seek params 1, 2835180, 0
+seek offset 2835180
+read params 1, 2725704, 2124
+seek params 1, 2837304, 0
+seek offset 2837304
+read params 1, 2727852, 2380
+seek params 1, 2839684, 0
+seek offset 2839684
+read params 1, 2730256, 2984
+seek params 1, 2842668, 0
+seek offset 2842668
+read params 1, 2733264, 3068
+seek params 1, 2845736, 0
+seek offset 2845736
+read params 1, 2736356, 2604
+seek params 1, 2848340, 0
+seek offset 2848340
+read params 1, 2738984, 2316
+seek params 1, 2850656, 0
+seek offset 2850656
+read params 1, 2741324, 2536
+seek params 1, 2853192, 0
+seek offset 2853192
+read params 1, 2743884, 2544
+seek params 1, 2855736, 0
+seek offset 2855736
+read params 1, 2746452, 2468
+seek params 1, 2858204, 0
+seek offset 2858204
+read params 1, 2748944, 2112
+seek params 1, 2860316, 0
+seek offset 2860316
+read params 1, 2751080, 2592
+seek params 1, 2862908, 0
+seek offset 2862908
+read params 1, 2753696, 2400
+seek params 1, 2865308, 0
+seek offset 2865308
+read params 1, 2756120, 2724
+seek params 1, 2868032, 0
+seek offset 2868032
+read params 1, 2758868, 2308
+seek params 1, 2870340, 0
+seek offset 2870340
+read params 1, 2761200, 2216
+seek params 1, 2872556, 0
+seek offset 2872556
+read params 1, 2763440, 2216
+seek params 1, 2874772, 0
+seek offset 2874772
+read params 1, 2765680, 2332
+seek params 1, 2877104, 0
+seek offset 2877104
+read params 1, 2768036, 2200
+seek params 1, 2879304, 0
+seek offset 2879304
+read params 1, 2770260, 2352
+seek params 1, 2881656, 0
+seek offset 2881656
+read params 1, 2772636, 2692
+seek params 1, 2884348, 0
+seek offset 2884348
+read params 1, 2775352, 2372
+seek params 1, 2886720, 0
+seek offset 2886720
+read params 1, 2777748, 2508
+seek params 1, 2889228, 0
+seek offset 2889228
+read params 1, 2780280, 2324
+seek params 1, 2891552, 0
+seek offset 2891552
+read params 1, 2782628, 2376
+seek params 1, 2893928, 0
+seek offset 2893928
+read params 1, 2785028, 2200
+seek params 1, 2896128, 0
+seek offset 2896128
+read params 1, 2787252, 2272
+seek params 1, 2898400, 0
+seek offset 2898400
+read params 1, 2789548, 2436
+seek params 1, 2900836, 0
+seek offset 2900836
+read params 1, 2792008, 2692
+seek params 1, 2903528, 0
+seek offset 2903528
+read params 1, 2794724, 2576
+write params .
+€seek params 1, 2906104, 0
+seek offset 2906104
+read params 1, 2797324, 2504
+seek params 1, 2908608, 0
+seek offset 2908608
+read params 1, 2799852, 2032
+seek params 1, 2910640, 0
+seek offset 2910640
+read params 1, 2801908, 1760
+seek params 1, 2912400, 0
+seek offset 2912400
+read params 1, 2803692, 1784
+seek params 1, 2914184, 0
+seek offset 2914184
+read params 1, 2805500, 1784
+seek params 1, 2915968, 0
+seek offset 2915968
+read params 1, 2807308, 424
+seek params 1, 2916392, 0
+seek offset 2916392
+read params 1, 2807756, 576
+seek params 1, 2916968, 0
+seek offset 2916968
+read params 1, 2808356, 748
+seek params 1, 2917716, 0
+seek offset 2917716
+read params 1, 2809128, 508
+seek params 1, 2918224, 0
+seek offset 2918224
+read params 1, 2809660, 460
+seek params 1, 2918684, 0
+seek offset 2918684
+read params 1, 2810144, 568
+seek params 1, 2919252, 0
+seek offset 2919252
+read params 1, 2810736, 768
+seek params 1, 2920020, 0
+seek offset 2920020
+read params 1, 2811528, 520
+seek params 1, 2920540, 0
+seek offset 2920540
+read params 1, 2812072, 1020
+seek params 1, 2921560, 0
+seek offset 2921560
+read params 1, 2813116, 1308
+seek params 1, 2922868, 0
+seek offset 2922868
+read params 1, 2814448, 1776
+seek params 1, 2924644, 0
+seek offset 2924644
+read params 1, 2816248, 1420
+seek params 1, 2926064, 0
+seek offset 2926064
+read params 1, 2817692, 1332
+seek params 1, 2927396, 0
+seek offset 2927396
+read params 1, 2819048, 1424
+seek params 1, 2928820, 0
+seek offset 2928820
+read params 1, 2820496, 1388
+seek params 1, 2930208, 0
+seek offset 2930208
+read params 1, 2821908, 1220
+seek params 1, 2931428, 0
+seek offset 2931428
+read params 1, 2823152, 1452
+seek params 1, 2932880, 0
+seek offset 2932880
+read params 1, 2824628, 1288
+seek params 1, 2934168, 0
+seek offset 2934168
+read params 1, 2825940, 1300
+seek params 1, 2935468, 0
+seek offset 2935468
+read params 1, 2827264, 1388
+seek params 1, 2936856, 0
+seek offset 2936856
+read params 1, 2828676, 1312
+seek params 1, 2938168, 0
+seek offset 2938168
+read params 1, 2830012, 1432
+seek params 1, 2939600, 0
+seek offset 2939600
+read params 1, 2831468, 1436
+seek params 1, 2941036, 0
+seek offset 2941036
+read params 1, 2832928, 1304
+seek params 1, 2942340, 0
+seek offset 2942340
+read params 1, 2834256, 1352
+seek params 1, 2943692, 0
+seek offset 2943692
+read params 1, 2835632, 1344
+seek params 1, 2945036, 0
+seek offset 2945036
+read params 1, 2837000, 1440
+seek params 1, 2946476, 0
+seek offset 2946476
+read params 1, 2838464, 1400
+seek params 1, 2947876, 0
+seek offset 2947876
+read params 1, 2839888, 1228
+seek params 1, 2949104, 0
+seek offset 2949104
+read params 1, 2841140, 1300
+seek params 1, 2950404, 0
+seek offset 2950404
+read params 1, 2842464, 1348
+seek params 1, 2951752, 0
+seek offset 2951752
+read params 1, 2843836, 1276
+seek params 1, 2953028, 0
+seek offset 2953028
+read params 1, 2845136, 1368
+seek params 1, 2954396, 0
+seek offset 2954396
+read params 1, 2846528, 1600
+seek params 1, 2955996, 0
+seek offset 2955996
+read params 1, 2848152, 1420
+seek params 1, 2957416, 0
+seek offset 2957416
+read params 1, 2849596, 1172
+seek params 1, 2958588, 0
+seek offset 2958588
+read params 1, 2850792, 1280
+seek params 1, 2959868, 0
+seek offset 2959868
+read params 1, 2852096, 1412
+seek params 1, 2961280, 0
+seek offset 2961280
+read params 1, 2853532, 1648
+seek params 1, 2962928, 0
+seek offset 2962928
+read params 1, 2855204, 1496
+seek params 1, 2964424, 0
+seek offset 2964424
+read params 1, 2856724, 1120
+seek params 1, 2965544, 0
+seek offset 2965544
+read params 1, 2857868, 1492
+seek params 1, 2967036, 0
+seek offset 2967036
+read params 1, 2859384, 1316
+seek params 1, 2968352, 0
+seek offset 2968352
+read params 1, 2860724, 1484
+seek params 1, 2969836, 0
+seek offset 2969836
+read params 1, 2862232, 1496
+seek params 1, 2971332, 0
+seek offset 2971332
+read params 1, 2863752, 1396
+seek params 1, 2972728, 0
+seek offset 2972728
+read params 1, 2865172, 1636
+seek params 1, 2974364, 0
+seek offset 2974364
+read params 1, 2866832, 1428
+seek params 1, 2975792, 0
+seek offset 2975792
+read params 1, 2868284, 1532
+seek params 1, 2977324, 0
+seek offset 2977324
+read params 1, 2869840, 1412
+seek params 1, 2978736, 0
+seek offset 2978736
+read params 1, 2871276, 1048
+seek params 1, 2979784, 0
+seek offset 2979784
+read params 1, 2872348, 1052
+seek params 1, 2980836, 0
+seek offset 2980836
+read params 1, 2873424, 1060
+seek params 1, 2981896, 0
+seek offset 2981896
+read params 1, 2874508, 1668
+seek params 1, 2983564, 0
+seek offset 2983564
+read params 1, 2876200, 2304
+seek params 1, 2985868, 0
+seek offset 2985868
+read params 1, 2878528, 2432
+seek params 1, 2988300, 0
+seek offset 2988300
+read params 1, 2880984, 2304
+seek params 1, 2990604, 0
+seek offset 2990604
+read params 1, 2883312, 1968
+seek params 1, 2992572, 0
+seek offset 2992572
+read params 1, 2885304, 1748
+write params .
+€seek params 1, 2994320, 0
+seek offset 2994320
+read params 1, 2887076, 1604
+seek params 1, 2995924, 0
+seek offset 2995924
+read params 1, 2888704, 1384
+seek params 1, 2997308, 0
+seek offset 2997308
+read params 1, 2890112, 1364
+seek params 1, 2998672, 0
+seek offset 2998672
+read params 1, 2891500, 1392
+seek params 1, 3000064, 0
+seek offset 3000064
+read params 1, 2892916, 1316
+seek params 1, 3001380, 0
+seek offset 3001380
+read params 1, 2894256, 1408
+seek params 1, 3002788, 0
+seek offset 3002788
+read params 1, 2895688, 1352
+seek params 1, 3004140, 0
+seek offset 3004140
+read params 1, 2897064, 1220
+seek params 1, 3005360, 0
+seek offset 3005360
+read params 1, 2898308, 1416
+seek params 1, 3006776, 0
+seek offset 3006776
+read params 1, 2899748, 1260
+seek params 1, 3008036, 0
+seek offset 3008036
+read params 1, 2901032, 1284
+seek params 1, 3009320, 0
+seek offset 3009320
+read params 1, 2902340, 1356
+seek params 1, 3010676, 0
+seek offset 3010676
+read params 1, 2903720, 1300
+seek params 1, 3011976, 0
+seek offset 3011976
+read params 1, 2905044, 1404
+seek params 1, 3013380, 0
+seek offset 3013380
+read params 1, 2906472, 1412
+seek params 1, 3014792, 0
+seek offset 3014792
+read params 1, 2907908, 1304
+seek params 1, 3016096, 0
+seek offset 3016096
+read params 1, 2909236, 1336
+seek params 1, 3017432, 0
+seek offset 3017432
+read params 1, 2910596, 1336
+seek params 1, 3018768, 0
+seek offset 3018768
+read params 1, 2911956, 1428
+seek params 1, 3020196, 0
+seek offset 3020196
+read params 1, 2913408, 1372
+seek params 1, 3021568, 0
+seek offset 3021568
+read params 1, 2914804, 1208
+seek params 1, 3022776, 0
+seek offset 3022776
+read params 1, 2916036, 1292
+seek params 1, 3024068, 0
+seek offset 3024068
+read params 1, 2917352, 1312
+seek params 1, 3025380, 0
+seek offset 3025380
+read params 1, 2918688, 1248
+seek params 1, 3026628, 0
+seek offset 3026628
+read params 1, 2919960, 1356
+seek params 1, 3027984, 0
+seek offset 3027984
+read params 1, 2921340, 1584
+seek params 1, 3029568, 0
+seek offset 3029568
+read params 1, 2922948, 1420
+seek params 1, 3030988, 0
+seek offset 3030988
+read params 1, 2924392, 1156
+seek params 1, 3032144, 0
+seek offset 3032144
+read params 1, 2925572, 1248
+seek params 1, 3033392, 0
+seek offset 3033392
+read params 1, 2926844, 1416
+seek params 1, 3034808, 0
+seek offset 3034808
+read params 1, 2928284, 1644
+seek params 1, 3036452, 0
+seek offset 3036452
+read params 1, 2929952, 1480
+seek params 1, 3037932, 0
+seek offset 3037932
+read params 1, 2931456, 1112
+seek params 1, 3039044, 0
+seek offset 3039044
+read params 1, 2932592, 1484
+seek params 1, 3040528, 0
+seek offset 3040528
+read params 1, 2934100, 1288
+seek params 1, 3041816, 0
+seek offset 3041816
+read params 1, 2935412, 1424
+seek params 1, 3043240, 0
+seek offset 3043240
+read params 1, 2936860, 1472
+seek params 1, 3044712, 0
+seek offset 3044712
+read params 1, 2938356, 1384
+seek params 1, 3046096, 0
+seek offset 3046096
+read params 1, 2939764, 1604
+seek params 1, 3047700, 0
+seek offset 3047700
+read params 1, 2941392, 1276
+seek params 1, 3048976, 0
+seek offset 3048976
+read params 1, 2942692, 1224
+seek params 1, 3050200, 0
+seek offset 3050200
+read params 1, 2943940, 1128
+seek params 1, 3051328, 0
+seek offset 3051328
+read params 1, 2945092, 988
+seek params 1, 3052316, 0
+seek offset 3052316
+read params 1, 2946104, 1824
+seek params 1, 3054140, 0
+seek offset 3054140
+read params 1, 2947952, 2408
+seek params 1, 3056548, 0
+seek offset 3056548
+read params 1, 2950384, 2524
+seek params 1, 3059072, 0
+seek offset 3059072
+read params 1, 2952932, 2368
+seek params 1, 3061440, 0
+seek offset 3061440
+read params 1, 2955324, 1992
+seek params 1, 3063432, 0
+seek offset 3063432
+read params 1, 2957340, 1772
+seek params 1, 3065204, 0
+seek offset 3065204
+read params 1, 2959136, 1640
+seek params 1, 3066844, 0
+seek offset 3066844
+read params 1, 2960800, 1464
+seek params 1, 3068308, 0
+seek offset 3068308
+read params 1, 2962288, 1352
+seek params 1, 3069660, 0
+seek offset 3069660
+read params 1, 2963664, 1316
+seek params 1, 3070976, 0
+seek offset 3070976
+read params 1, 2965004, 1224
+seek params 1, 3072200, 0
+seek offset 3072200
+read params 1, 2966252, 1320
+seek params 1, 3073520, 0
+seek offset 3073520
+read params 1, 2967596, 1320
+seek params 1, 3074840, 0
+seek offset 3074840
+read params 1, 2968940, 1212
+seek params 1, 3076052, 0
+seek offset 3076052
+read params 1, 2970176, 1384
+seek params 1, 3077436, 0
+seek offset 3077436
+read params 1, 2971584, 1104
+seek params 1, 3078540, 0
+seek offset 3078540
+read params 1, 2972712, 1136
+seek params 1, 3079676, 0
+seek offset 3079676
+read params 1, 2973872, 1312
+seek params 1, 3080988, 0
+seek offset 3080988
+read params 1, 2975208, 1300
+seek params 1, 3082288, 0
+seek offset 3082288
+read params 1, 2976532, 1336
+seek params 1, 3083624, 0
+seek offset 3083624
+read params 1, 2977892, 1228
+write params .
+€seek params 1, 3084852, 0
+seek offset 3084852
+read params 1, 2979144, 1256
+seek params 1, 3086108, 0
+seek offset 3086108
+read params 1, 2980424, 1264
+seek params 1, 3087372, 0
+seek offset 3087372
+read params 1, 2981712, 1332
+seek params 1, 3088704, 0
+seek offset 3088704
+read params 1, 2983068, 1364
+seek params 1, 3090068, 0
+seek offset 3090068
+read params 1, 2984456, 1240
+seek params 1, 3091308, 0
+seek offset 3091308
+read params 1, 2985720, 1128
+seek params 1, 3092436, 0
+seek offset 3092436
+read params 1, 2986872, 1228
+seek params 1, 3093664, 0
+seek offset 3093664
+read params 1, 2988124, 1324
+seek params 1, 3094988, 0
+seek offset 3094988
+read params 1, 2989472, 1240
+seek params 1, 3096228, 0
+seek offset 3096228
+read params 1, 2990736, 1208
+seek params 1, 3097436, 0
+seek offset 3097436
+read params 1, 2991968, 1428
+seek params 1, 3098864, 0
+seek offset 3098864
+read params 1, 2993420, 1360
+seek params 1, 3100224, 0
+seek offset 3100224
+read params 1, 2994804, 1156
+seek params 1, 3101380, 0
+seek offset 3101380
+read params 1, 2995984, 1232
+seek params 1, 3102612, 0
+seek offset 3102612
+read params 1, 2997240, 1296
+seek params 1, 3103908, 0
+seek offset 3103908
+read params 1, 2998560, 1552
+seek params 1, 3105460, 0
+seek offset 3105460
+read params 1, 3000136, 1476
+seek params 1, 3106936, 0
+seek offset 3106936
+read params 1, 3001636, 1116
+seek params 1, 3108052, 0
+seek offset 3108052
+read params 1, 3002776, 1356
+seek params 1, 3109408, 0
+seek offset 3109408
+read params 1, 3004156, 1184
+seek params 1, 3110592, 0
+seek offset 3110592
+read params 1, 3005364, 1396
+seek params 1, 3111988, 0
+seek offset 3111988
+read params 1, 3006784, 1472
+seek params 1, 3113460, 0
+seek offset 3113460
+read params 1, 3008280, 1332
+seek params 1, 3114792, 0
+seek offset 3114792
+read params 1, 3009636, 1496
+seek params 1, 3116288, 0
+seek offset 3116288
+read params 1, 3011156, 1320
+seek params 1, 3117608, 0
+seek offset 3117608
+read params 1, 3012500, 1244
+seek params 1, 3118852, 0
+seek offset 3118852
+read params 1, 3013768, 1144
+seek params 1, 3119996, 0
+seek offset 3119996
+read params 1, 3014936, 1056
+seek params 1, 3121052, 0
+seek offset 3121052
+read params 1, 3016016, 1724
+seek params 1, 3122776, 0
+seek offset 3122776
+read params 1, 3017764, 2376
+seek params 1, 3125152, 0
+seek offset 3125152
+read params 1, 3020164, 2524
+seek params 1, 3127676, 0
+seek offset 3127676
+read params 1, 3022712, 2368
+seek params 1, 3130044, 0
+seek offset 3130044
+read params 1, 3025104, 1992
+seek params 1, 3132036, 0
+seek offset 3132036
+read params 1, 3027120, 1772
+seek params 1, 3133808, 0
+seek offset 3133808
+read params 1, 3028916, 1640
+seek params 1, 3135448, 0
+seek offset 3135448
+read params 1, 3030580, 1464
+seek params 1, 3136912, 0
+seek offset 3136912
+read params 1, 3032068, 1352
+seek params 1, 3138264, 0
+seek offset 3138264
+read params 1, 3033444, 836
+seek params 1, 3139100, 0
+seek offset 3139100
+read params 1, 3034304, 244
+seek params 1, 3139344, 0
+seek offset 3139344
+read params 1, 3034572, 1100
+seek params 1, 3140444, 0
+seek offset 3140444
+read params 1, 3035696, 904
+seek params 1, 3141348, 0
+seek offset 3141348
+read params 1, 3036624, 1124
+seek params 1, 3142472, 0
+seek offset 3142472
+read params 1, 3037772, 1124
+seek params 1, 3143596, 0
+seek offset 3143596
+read params 1, 3038920, 1524
+seek params 1, 3145120, 0
+seek offset 3145120
+read params 1, 3040468, 188
+seek params 1, 3145308, 0
+seek offset 3145308
+read params 1, 3040680, 216
+seek params 1, 3145524, 0
+seek offset 3145524
+read params 1, 3040920, 364
+seek params 1, 3145888, 0
+seek offset 3145888
+read params 1, 3041308, 340
+seek params 1, 3146228, 0
+seek offset 3146228
+read params 1, 3041672, 780
+seek params 1, 3147008, 0
+seek offset 3147008
+read params 1, 3042476, 656
+seek params 1, 3147664, 0
+seek offset 3147664
+read params 1, 3043156, 656
+seek params 1, 3148320, 0
+seek offset 3148320
+read params 1, 3043836, 656
+seek params 1, 3148976, 0
+seek offset 3148976
+read params 1, 3044516, 656
+seek params 1, 3149632, 0
+seek offset 3149632
+read params 1, 3045196, 944
+seek params 1, 3150576, 0
+seek offset 3150576
+read params 1, 3046164, 944
+seek params 1, 3151520, 0
+seek offset 3151520
+read params 1, 3047132, 832
+seek params 1, 3152352, 0
+seek offset 3152352
+read params 1, 3047988, 796
+seek params 1, 3153148, 0
+seek offset 3153148
+read params 1, 3048808, 1616
+seek params 1, 3154764, 0
+seek offset 3154764
+read params 1, 3050448, 704
+seek params 1, 3155468, 0
+seek offset 3155468
+read params 1, 3051176, 664
+seek params 1, 3156132, 0
+seek offset 3156132
+read params 1, 3051864, 4272
+seek params 1, 3160404, 0
+seek offset 3160404
+read params 1, 3056160, 332
+seek params 1, 3160736, 0
+seek offset 3160736
+read params 1, 3056516, 332
+seek params 1, 3161068, 0
+seek offset 3161068
+read params 1, 3056872, 332
+write params .
+€seek params 1, 3161400, 0
+seek offset 3161400
+read params 1, 3057228, 332
+seek params 1, 3161732, 0
+seek offset 3161732
+read params 1, 3057584, 332
+seek params 1, 3162064, 0
+seek offset 3162064
+read params 1, 3057940, 332
+seek params 1, 3162396, 0
+seek offset 3162396
+read params 1, 3058296, 1112
+seek params 1, 3163508, 0
+seek offset 3163508
+read params 1, 3059432, 604
+seek params 1, 3164112, 0
+seek offset 3164112
+read params 1, 3060060, 604
+seek params 1, 3164716, 0
+seek offset 3164716
+read params 1, 3060688, 944
+seek params 1, 3165660, 0
+seek offset 3165660
+read params 1, 3061656, 924
+seek params 1, 3166584, 0
+seek offset 3166584
+read params 1, 3062604, 1584
+seek params 1, 3168168, 0
+seek offset 3168168
+read params 1, 3064212, 2696
+seek params 1, 3170864, 0
+seek offset 3170864
+read params 1, 3066932, 3420
+seek params 1, 3174284, 0
+seek offset 3174284
+read params 1, 3070376, 1004
+seek params 1, 3175288, 0
+seek offset 3175288
+read params 1, 3071404, 1004
+seek params 1, 3176292, 0
+seek offset 3176292
+read params 1, 3072432, 1004
+seek params 1, 3177296, 0
+seek offset 3177296
+read params 1, 3073460, 1004
+seek params 1, 3178300, 0
+seek offset 3178300
+read params 1, 3074488, 724
+seek params 1, 3179024, 0
+seek offset 3179024
+read params 1, 3075236, 724
+seek params 1, 3179748, 0
+seek offset 3179748
+read params 1, 3075984, 724
+seek params 1, 3180472, 0
+seek offset 3180472
+read params 1, 3076732, 724
+seek params 1, 3181196, 0
+seek offset 3181196
+read params 1, 3077480, 292
+seek params 1, 3181488, 0
+seek offset 3181488
+read params 1, 3077796, 292
+seek params 1, 3181780, 0
+seek offset 3181780
+read params 1, 3078112, 292
+seek params 1, 3182072, 0
+seek offset 3182072
+read params 1, 3078428, 292
+seek params 1, 3182364, 0
+seek offset 3182364
+read params 1, 3078744, 724
+seek params 1, 3183088, 0
+seek offset 3183088
+read params 1, 3079492, 724
+seek params 1, 3183812, 0
+seek offset 3183812
+read params 1, 3080240, 724
+seek params 1, 3184536, 0
+seek offset 3184536
+read params 1, 3080988, 724
+seek params 1, 3185260, 0
+seek offset 3185260
+read params 1, 3081736, 356
+seek params 1, 3185616, 0
+seek offset 3185616
+read params 1, 3082116, 356
+seek params 1, 3185972, 0
+seek offset 3185972
+read params 1, 3082496, 356
+seek params 1, 3186328, 0
+seek offset 3186328
+read params 1, 3082876, 356
+seek params 1, 3186684, 0
+seek offset 3186684
+read params 1, 3083256, 1120
+seek params 1, 3187804, 0
+seek offset 3187804
+read params 1, 3084400, 1060
+seek params 1, 3188864, 0
+seek offset 3188864
+read params 1, 3085484, 1048
+seek params 1, 3189912, 0
+seek offset 3189912
+read params 1, 3086556, 1088
+write params 
+InitSprites
+ seek params 1, 10764, 0
+seek offset 10764
+read params 1, 3087872, 8704
+write params 
+InitColormaps
+ write params 
+R_InitData
+°write params 
+R_InitPointToAngle
+°write params 
+R_InitTables
+°write params 
+R_InitPlanes
+°write params 
+R_InitLightTables
+°write params 
+R_InitSkyMap
+°write params 
+R_InitTranslationsTables
+°write params 
+P_Init: Init Playloop state.
+
+Ğwrite params I_Init: Setting up machine state.
+
+Ğseek params 1, 945036, 0
+seek offset 945036
+read params 1, 3107608, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3119480, 5669
+seek params 1, 950760, 0
+seek offset 950760
+read params 1, 3131352, 9453
+seek params 1, 960256, 0
+seek offset 960256
+read params 1, 3150592, 5906
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3162700, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3174572, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3186444, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3198316, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3210188, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3222060, 5669
+seek params 1, 966316, 0
+seek offset 966316
+read params 1, 3233932, 16297
+seek params 1, 982640, 0
+seek offset 982640
+read params 1, 3266672, 7539
+seek params 1, 990204, 0
+seek offset 990204
+read params 1, 3281948, 18104
+seek params 1, 1008340, 0
+seek offset 1008340
+read params 1, 3318540, 8018
+seek params 1, 1016416, 0
+seek offset 1016416
+read params 1, 3334808, 15491
+seek params 1, 1031952, 0
+seek offset 1031952
+read params 1, 3366228, 14483
+seek params 1, 1046488, 0
+seek offset 1046488
+read params 1, 3395616, 14748
+seek params 1, 1061272, 0
+seek offset 1061272
+read params 1, 3425268, 11701
+seek params 1, 1072988, 0
+seek offset 1072988
+read params 1, 3448804, 8236
+seek params 1, 1081236, 0
+seek offset 1081236
+read params 1, 3465800, 6666
+seek params 1, 1087960, 0
+seek offset 1087960
+read params 1, 3479692, 13824
+seek params 1, 1101836, 0
+seek offset 1101836
+read params 1, 3507396, 13890
+seek params 1, 1115740, 0
+seek offset 1115740
+read params 1, 3535680, 2967
+seek params 1, 1118720, 0
+seek offset 1118720
+read params 1, 3541776, 6263
+seek params 1, 1124996, 0
+seek offset 1124996
+read params 1, 3554752, 5411
+seek params 1, 1130448, 0
+seek offset 1130448
+read params 1, 3565852, 15160
+seek params 1, 1145648, 0
+seek offset 1145648
+read params 1, 3596428, 9519
+seek params 1, 1155212, 0
+seek offset 1155212
+read params 1, 3615732, 8643
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3633136, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3645008, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3656880, 5669
+seek params 1, 1163900, 0
+seek offset 1163900
+read params 1, 3668752, 11126
+seek params 1, 1175088, 0
+seek offset 1175088
+read params 1, 3691200, 2271
+seek params 1, 1177380, 0
+seek offset 1177380
+read params 1, 3696088, 5883
+seek params 1, 1183280, 0
+seek offset 1183280
+read params 1, 3708172, 3918
+seek params 1, 1187284, 0
+seek offset 1187284
+read params 1, 3716244, 15492
+seek params 1, 1202840, 0
+seek offset 1202840
+read params 1, 3747664, 5342
+seek params 1, 1208248, 0
+seek offset 1208248
+read params 1, 3758696, 11286
+seek params 1, 1219600, 0
+seek offset 1219600
+read params 1, 3781816, 11103
+seek params 1, 1230768, 0
+seek offset 1230768
+read params 1, 3804240, 13634
+seek params 1, 1244468, 0
+seek offset 1244468
+read params 1, 3831756, 16083
+seek params 1, 1260616, 0
+seek offset 1260616
+read params 1, 3864280, 11172
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3886772, 5669
+seek params 1, 1271924, 0
+seek offset 1271924
+read params 1, 3898644, 13770
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3926296, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3938168, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3950040, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3961912, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3973784, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3985656, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 3997528, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4009400, 5669
+seek params 1, 1285760, 0
+seek offset 1285760
+read params 1, 4021272, 9358
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4040416, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4052288, 5669
+seek params 1, 1295184, 0
+seek offset 1295184
+read params 1, 4064160, 6412
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4077284, 5669
+seek params 1, 1301680, 0
+seek offset 1301680
+read params 1, 4089156, 11020
+seek params 1, 1312716, 0
+seek offset 1312716
+read params 1, 4111496, 10843
+seek params 1, 1323648, 0
+seek offset 1323648
+read params 1, 4133660, 12971
+seek params 1, 1336708, 0
+seek offset 1336708
+read params 1, 4160000, 9342
+seek params 1, 1346140, 0
+seek offset 1346140
+read params 1, 4179128, 10954
+seek params 1, 1357184, 0
+seek offset 1357184
+read params 1, 4201404, 7129
+seek params 1, 1364404, 0
+seek offset 1364404
+read params 1, 4215760, 9319
+seek params 1, 1373812, 0
+seek offset 1373812
+read params 1, 4234864, 12259
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4259468, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4271340, 5669
+seek params 1, 1386144, 0
+seek offset 1386144
+read params 1, 4283212, 11043
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4305576, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4317448, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4329320, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4341192, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4353064, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4364936, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4376808, 5669
+seek params 1, 1397296, 0
+seek offset 1397296
+read params 1, 4388680, 10782
+seek params 1, 1408188, 0
+seek offset 1408188
+read params 1, 4410784, 10032
+seek params 1, 1418328, 0
+seek offset 1418328
+read params 1, 4431112, 11857
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4455316, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4467188, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4479060, 5669
+seek params 1, 1430228, 0
+seek offset 1430228
+read params 1, 4490932, 3918
+seek params 1, 1434272, 0
+seek offset 1434272
+read params 1, 4499004, 18600
+seek params 1, 1452936, 0
+seek offset 1452936
+read params 1, 4536604, 2504
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4541724, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4553596, 5669
+seek params 1, 1455460, 0
+seek offset 1455460
+read params 1, 4565468, 205
+seek params 1, 1455724, 0
+seek offset 1455724
+read params 1, 4566244, 4189
+seek params 1, 1459968, 0
+seek offset 1459968
+read params 1, 4575100, 4203
+seek params 1, 1464192, 0
+seek offset 1464192
+read params 1, 4583968, 11183
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4606472, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4618344, 5669
+seek params 1, 1475392, 0
+seek offset 1475392
+read params 1, 4630216, 7936
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4646400, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4658272, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4670144, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4682016, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4693888, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4705760, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4717632, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4729504, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4741376, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4753248, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4765120, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4776992, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4788864, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4800736, 5669
+seek params 1, 945036, 0
+seek offset 945036
+read params 1, 4812608, 5669
+write params D_CheckNetGame: Checking network game status.
+
+Ğwrite params startskill 2  deathmatch: 0  startmap: 1  startepisode: 1
+
+ write params player 1 of 1 (1 nodes)
+
+°write params S_Init: Setting up sound.
+
+Ğwrite params S_Init: default sfx volume 8
+
+
+write params HU_Init: Setting up heads up display.
+
+Ğseek params 1, 2022948, 0
+seek offset 2022948
+read params 1, 4824540, 72
+seek params 1, 2023020, 0
+seek offset 2023020
+read params 1, 4824636, 100
+seek params 1, 2023120, 0
+seek offset 2023120
+read params 1, 4824760, 116
+seek params 1, 2023236, 0
+seek offset 2023236
+read params 1, 4824900, 128
+seek params 1, 2023364, 0
+seek offset 2023364
+read params 1, 4825052, 144
+seek params 1, 2023508, 0
+seek offset 2023508
+read params 1, 4825220, 132
+seek params 1, 2023640, 0
+seek offset 2023640
+read params 1, 4825376, 60
+seek params 1, 2023700, 0
+seek offset 2023700
+read params 1, 4825460, 120
+seek params 1, 2023820, 0
+seek offset 2023820
+read params 1, 4825604, 120
+seek params 1, 2023940, 0
+seek offset 2023940
+read params 1, 4825748, 96
+seek params 1, 2024036, 0
+seek offset 2024036
+read params 1, 4825868, 76
+seek params 1, 2024112, 0
+seek offset 2024112
+read params 1, 4825968, 60
+seek params 1, 2024172, 0
+seek offset 2024172
+read params 1, 4826052, 80
+seek params 1, 2024252, 0
+seek offset 2024252
+read params 1, 4826156, 56
+seek params 1, 2024308, 0
+seek offset 2024308
+read params 1, 4826236, 100
+seek params 1, 2024408, 0
+seek offset 2024408
+read params 1, 4826360, 132
+seek params 1, 2024540, 0
+seek offset 2024540
+read params 1, 4826516, 84
+seek params 1, 2024624, 0
+seek offset 2024624
+read params 1, 4826624, 140
+seek params 1, 2024764, 0
+seek offset 2024764
+read params 1, 4826788, 132
+seek params 1, 2024896, 0
+seek offset 2024896
+read params 1, 4826944, 116
+seek params 1, 2025012, 0
+seek offset 2025012
+read params 1, 4827084, 124
+seek params 1, 2025136, 0
+seek offset 2025136
+read params 1, 4827232, 132
+seek params 1, 2025268, 0
+seek offset 2025268
+read params 1, 4827388, 120
+seek params 1, 2025388, 0
+seek offset 2025388
+read params 1, 4827532, 140
+seek params 1, 2025528, 0
+seek offset 2025528
+read params 1, 4827696, 132
+seek params 1, 2025660, 0
+seek offset 2025660
+read params 1, 4827852, 84
+seek params 1, 2025744, 0
+seek offset 2025744
+read params 1, 4827960, 72
+seek params 1, 2025816, 0
+seek offset 2025816
+read params 1, 4828056, 80
+seek params 1, 2025896, 0
+seek offset 2025896
+read params 1, 4828160, 80
+seek params 1, 2025976, 0
+seek offset 2025976
+read params 1, 4828264, 80
+seek params 1, 2026056, 0
+seek offset 2026056
+read params 1, 4828368, 128
+seek params 1, 2026184, 0
+seek offset 2026184
+read params 1, 4828520, 156
+seek params 1, 2026340, 0
+seek offset 2026340
+read params 1, 4828700, 132
+seek params 1, 2026472, 0
+seek offset 2026472
+read params 1, 4828856, 140
+seek params 1, 2026612, 0
+seek offset 2026612
+read params 1, 4829020, 140
+seek params 1, 2026752, 0
+seek offset 2026752
+read params 1, 4829184, 132
+seek params 1, 2026884, 0
+seek offset 2026884
+read params 1, 4829340, 132
+seek params 1, 2027016, 0
+seek offset 2027016
+read params 1, 4829496, 128
+seek params 1, 2027144, 0
+seek offset 2027144
+read params 1, 4829648, 132
+seek params 1, 2027276, 0
+seek offset 2027276
+read params 1, 4829804, 136
+seek params 1, 2027412, 0
+seek offset 2027412
+read params 1, 4829964, 72
+seek params 1, 2027484, 0
+seek offset 2027484
+read params 1, 4830060, 120
+seek params 1, 2027604, 0
+seek offset 2027604
+read params 1, 4830204, 140
+seek params 1, 2027744, 0
+seek offset 2027744
+read params 1, 4830368, 120
+seek params 1, 2027864, 0
+seek offset 2027864
+read params 1, 4830512, 148
+seek params 1, 2028012, 0
+seek offset 2028012
+read params 1, 4830684, 136
+seek params 1, 2028148, 0
+seek offset 2028148
+read params 1, 4830844, 124
+seek params 1, 2028272, 0
+seek offset 2028272
+read params 1, 4830992, 128
+seek params 1, 2028400, 0
+seek offset 2028400
+read params 1, 4831144, 136
+seek params 1, 2028536, 0
+seek offset 2028536
+read params 1, 4831304, 140
+seek params 1, 2028676, 0
+seek offset 2028676
+read params 1, 4831468, 120
+seek params 1, 2028796, 0
+seek offset 2028796
+read params 1, 4831612, 120
+seek params 1, 2028916, 0
+seek offset 2028916
+read params 1, 4831756, 132
+seek params 1, 2029048, 0
+seek offset 2029048
+read params 1, 4831912, 108
+seek params 1, 2029156, 0
+seek offset 2029156
+read params 1, 4832044, 148
+seek params 1, 2029304, 0
+seek offset 2029304
+read params 1, 4832216, 160
+seek params 1, 2029464, 0
+seek offset 2029464
+read params 1, 4832400, 124
+seek params 1, 2029588, 0
+seek offset 2029588
+read params 1, 4832548, 128
+seek params 1, 2029716, 0
+seek offset 2029716
+read params 1, 4832700, 92
+seek params 1, 2029808, 0
+seek offset 2029808
+read params 1, 4832816, 100
+seek params 1, 2029908, 0
+seek offset 2029908
+read params 1, 4832940, 92
+seek params 1, 2030000, 0
+seek offset 2030000
+read params 1, 4833056, 96
+seek params 1, 2030096, 0
+seek offset 2030096
+read params 1, 4833176, 104
+write params ST_Init: Init status bar.
+
+Ğseek params 1, 2015676, 0
+seek offset 2015676
+read params 1, 4833304, 320
+seek params 1, 2019204, 0
+seek offset 2019204
+read params 1, 4833648, 68
+seek params 1, 2015996, 0
+seek offset 2015996
+read params 1, 4833740, 244
+seek params 1, 2019272, 0
+seek offset 2019272
+read params 1, 4834008, 64
+seek params 1, 2016240, 0
+seek offset 2016240
+read params 1, 4834096, 336
+seek params 1, 2019336, 0
+seek offset 2019336
+read params 1, 4834456, 76
+seek params 1, 2016576, 0
+seek offset 2016576
+read params 1, 4834556, 336
+seek params 1, 2019412, 0
+seek offset 2019412
+read params 1, 4834916, 72
+seek params 1, 2016912, 0
+seek offset 2016912
+read params 1, 4835012, 316
+seek params 1, 2019484, 0
+seek offset 2019484
+read params 1, 4835352, 60
+seek params 1, 2017228, 0
+seek offset 2017228
+read params 1, 4835436, 348
+seek params 1, 2019544, 0
+seek offset 2019544
+read params 1, 4835808, 72
+seek params 1, 2017576, 0
+seek offset 2017576
+read params 1, 4835904, 340
+seek params 1, 2019616, 0
+seek offset 2019616
+read params 1, 4836268, 72
+seek params 1, 2017916, 0
+seek offset 2017916
+read params 1, 4836364, 276
+seek params 1, 2019688, 0
+seek offset 2019688
+read params 1, 4836664, 72
+seek params 1, 2018192, 0
+seek offset 2018192
+read params 1, 4836760, 348
+seek params 1, 2019760, 0
+seek offset 2019760
+read params 1, 4837132, 76
+seek params 1, 2018540, 0
+seek offset 2018540
+read params 1, 4837232, 336
+seek params 1, 2019836, 0
+seek offset 2019836
+read params 1, 4837592, 72
+seek params 1, 2018876, 0
+seek offset 2018876
+read params 1, 4837688, 328
+seek params 1, 2019908, 0
+seek offset 2019908
+read params 1, 4838040, 104
+seek params 1, 2020012, 0
+seek offset 2020012
+read params 1, 4838168, 104
+seek params 1, 2020116, 0
+seek offset 2020116
+read params 1, 4838296, 104
+seek params 1, 2020220, 0
+seek offset 2020220
+read params 1, 4838424, 120
+seek params 1, 2020340, 0
+seek offset 2020340
+read params 1, 4838568, 120
+seek params 1, 2020460, 0
+seek offset 2020460
+read params 1, 4838712, 120
+seek params 1, 2021300, 0
+seek offset 2021300
+read params 1, 4838856, 1648
+seek params 1, 2014976, 0
+seek offset 2014976
+read params 1, 4840528, 76
+seek params 1, 2015052, 0
+seek offset 2015052
+read params 1, 4840628, 72
+seek params 1, 2015124, 0
+seek offset 2015124
+read params 1, 4840724, 60
+seek params 1, 2015184, 0
+seek offset 2015184
+read params 1, 4840808, 72
+seek params 1, 2015256, 0
+seek offset 2015256
+read params 1, 4840904, 72
+seek params 1, 2015328, 0
+seek offset 2015328
+read params 1, 4841000, 72
+seek params 1, 2031680, 0
+seek offset 2031680
+read params 1, 4841096, 1408
+seek params 1, 2001716, 0
+seek offset 2001716
+read params 1, 4842528, 13128
+seek params 1, 2042632, 0
+seek offset 2042632
+read params 1, 4855680, 808
+seek params 1, 2041824, 0
+seek offset 2041824
+read params 1, 4856512, 808
+seek params 1, 2043440, 0
+seek offset 2043440
+read params 1, 4857344, 808
+seek params 1, 2045132, 0
+seek offset 2045132
+read params 1, 4858176, 880
+seek params 1, 2044248, 0
+seek offset 2044248
+read params 1, 4859080, 884
+seek params 1, 2046012, 0
+seek offset 2046012
+read params 1, 4859988, 844
+seek params 1, 2046856, 0
+seek offset 2046856
+read params 1, 4860856, 816
+seek params 1, 2047672, 0
+seek offset 2047672
+read params 1, 4861696, 824
+seek params 1, 2049304, 0
+seek offset 2049304
+read params 1, 4862544, 808
+seek params 1, 2048496, 0
+seek offset 2048496
+read params 1, 4863376, 808
+seek params 1, 2050112, 0
+seek offset 2050112
+read params 1, 4864208, 800
+seek params 1, 2051796, 0
+seek offset 2051796
+read params 1, 4865032, 888
+seek params 1, 2050912, 0
+seek offset 2050912
+read params 1, 4865944, 884
+seek params 1, 2052684, 0
+seek offset 2052684
+read params 1, 4866852, 844
+seek params 1, 2053528, 0
+seek offset 2053528
+read params 1, 4867720, 816
+seek params 1, 2054344, 0
+seek offset 2054344
+read params 1, 4868560, 824
+seek params 1, 2055996, 0
+seek offset 2055996
+read params 1, 4869408, 824
+seek params 1, 2055168, 0
+seek offset 2055168
+read params 1, 4870256, 828
+seek params 1, 2056820, 0
+seek offset 2056820
+read params 1, 4871108, 824
+seek params 1, 2058540, 0
+seek offset 2058540
+read params 1, 4871956, 896
+seek params 1, 2057644, 0
+seek offset 2057644
+read params 1, 4872876, 896
+seek params 1, 2059436, 0
+seek offset 2059436
+read params 1, 4873796, 844
+seek params 1, 2060280, 0
+seek offset 2060280
+read params 1, 4874664, 816
+seek params 1, 2061096, 0
+seek offset 2061096
+read params 1, 4875504, 824
+seek params 1, 2062756, 0
+seek offset 2062756
+read params 1, 4876352, 840
+seek params 1, 2061920, 0
+seek offset 2061920
+read params 1, 4877216, 836
+seek params 1, 2063596, 0
+seek offset 2063596
+read params 1, 4878076, 832
+seek params 1, 2065372, 0
+seek offset 2065372
+read params 1, 4878932, 908
+seek params 1, 2064428, 0
+seek offset 2064428
+read params 1, 4879864, 944
+seek params 1, 2066280, 0
+seek offset 2066280
+read params 1, 4880832, 844
+seek params 1, 2067124, 0
+seek offset 2067124
+read params 1, 4881700, 816
+seek params 1, 2067940, 0
+seek offset 2067940
+read params 1, 4882540, 824
+seek params 1, 2069600, 0
+seek offset 2069600
+read params 1, 4883388, 844
+seek params 1, 2068764, 0
+seek offset 2068764
+read params 1, 4884256, 836
+seek params 1, 2070444, 0
+seek offset 2070444
+read params 1, 4885116, 844
+seek params 1, 2072272, 0
+seek offset 2072272
+read params 1, 4885984, 908
+seek params 1, 2071288, 0
+seek offset 2071288
+read params 1, 4886916, 984
+seek params 1, 2073180, 0
+seek offset 2073180
+read params 1, 4887924, 844
+seek params 1, 2074024, 0
+seek offset 2074024
+read params 1, 4888792, 816
+seek params 1, 2074840, 0
+seek offset 2074840
+read params 1, 4889632, 824
+seek params 1, 2075664, 0
+seek offset 2075664
+read params 1, 4890480, 808
+seek params 1, 2076472, 0
+seek offset 2076472
+read params 1, 4891312, 836
+setvideo params 0
+seek params 1, 1712648, 0
+seek offset 1712648
+read params 1, 4902436, 1485
+seek params 1, 1933024, 0
+seek offset 1933024
+read params 1, 4903948, 68168
+seek params 1, 12, 0
+seek offset 12
+read params 1, 4972140, 10752
+seek params 1, 2077308, 0
+seek offset 2077308
+read params 1, 4982916, 6772
+seek params 1, 2090468, 0
+seek offset 2090468
+read params 1, 4989712, 2128
+seek params 1, 2086392, 0
+seek offset 2086392
+read params 1, 4991864, 1856
+seek params 1, 2148544, 0
+seek offset 2148544
+read params 1, 4993744, 2332
+seek params 1, 2146180, 0
+seek offset 2146180
+read params 1, 4996100, 2364
+seek params 1, 2084080, 0
+seek offset 2084080
+read params 1, 4998488, 2312
+seek params 1, 2088248, 0
+seek offset 2088248
+read params 1, 5000824, 2220
+seek params 1, 2092596, 0
+seek offset 2092596
+read params 1, 5003068, 504
+seek params 1, 2093100, 0
+seek offset 2093100
+read params 1, 5003596, 504
+seek params 1, 23468, 0
+seek offset 23468
+read params 1, 5004124, 20118
+seek params 1, 1574880, 0
+seek offset 1574880
+read params 1, 5024268, 9830
+seek params 1, 517752, 0
+seek offset 517752
+read params 1, 5034124, 8032
+seek params 1, 482536, 0
+seek offset 482536
+read params 1, 5051524, 2984
+seek params 1, 511472, 0
+seek offset 511472
+read params 1, 5064132, 3718
+seek params 1, 450944, 0
+seek offset 450944
+read params 1, 5085216, 31590
+seek params 1, 439392, 0
+seek offset 439392
+read params 1, 5138040, 11550
+seek params 1, 499212, 0
+seek offset 499212
+read params 1, 5141136, 1536
+seek params 1, 500748, 0
+seek offset 500748
+read params 1, 5161076, 10724
+seek params 1, 485520, 0
+seek offset 485520
+read params 1, 5197612, 13692
+seek params 1, 515192, 0
+seek offset 515192
+read params 1, 5197612, 2557
+seek params 1, 436460, 0
+seek offset 436460
+read params 1, 5204424, 2930
+seek params 1, 2015548, 0
+seek offset 2015548
+read params 1, 5207560, 128
+seek params 1, 3975092, 0
+seek offset 3975092
+read params 1, 5255404, 4096
+seek params 1, 4081588, 0
+seek offset 4081588
+read params 1, 5259524, 4096
+seek params 1, 4167604, 0
+seek offset 4167604
+read params 1, 5263644, 4096
+seek params 1, 4048820, 0
+seek offset 4048820
+read params 1, 5267764, 4096
+seek params 1, 2180412, 0
+seek offset 2180412
+read params 1, 5271884, 104
+seek params 1, 2180724, 0
+seek offset 2180724
+read params 1, 5272012, 104
+seek params 1, 2180560, 0
+seek offset 2180560
+read params 1, 5272140, 60
+seek params 1, 2180620, 0
+seek offset 2180620
+read params 1, 5272224, 60
+seek params 1, 2180368, 0
+seek offset 2180368
+read params 1, 5272308, 44
+seek params 1, 2180516, 0
+seek offset 2180516
+read params 1, 5272376, 44
+seek params 1, 2180680, 0
+seek offset 2180680
+read params 1, 5272444, 44
+seek params 1, 2180828, 0
+seek offset 2180828
+read params 1, 5272512, 44
+seek params 1, 4159412, 0
+seek offset 4159412
+read params 1, 5272580, 4096
+seek params 1, 4163508, 0
+seek offset 4163508
+read params 1, 5276700, 4096
+seek params 1, 3987380, 0
+seek offset 3987380
+read params 1, 5280820, 4096
+seek params 1, 2101592, 0
+seek offset 2101592
+read params 1, 5285184, 3404
+seek params 1, 2104996, 0
+seek offset 2104996
+read params 1, 5288612, 4908
+seek params 1, 2109904, 0
+seek offset 2109904
+read params 1, 5293544, 4220
+seek params 1, 2114124, 0
+seek offset 2114124
+read params 1, 5297788, 1784
+seek params 1, 4073396, 0
+seek offset 4073396
+read params 1, 5299776, 4096
+seek params 1, 4126644, 0
+seek offset 4126644
+read params 1, 5312652, 4096
+seek params 1, 4138932, 0
+seek offset 4138932
+read params 1, 5319384, 4096
+seek params 1, 4143028, 0
+seek offset 4143028
+read params 1, 5323504, 4096
+seek params 1, 4044724, 0
+seek offset 4044724
+read params 1, 5327624, 4096
+seek params 1, 2132104, 0
+seek offset 2132104
+read params 1, 5333428, 2452
+seek params 1, 2127708, 0
+seek offset 2127708
+read params 1, 5335904, 4396
+seek params 1, 2119140, 0
+seek offset 2119140
+read params 1, 5340324, 4248
+seek params 1, 2123388, 0
+seek offset 2123388
+read params 1, 5344596, 4320
+seek params 1, 2115908, 0
+seek offset 2115908
+read params 1, 5348940, 3232
+seek params 1, 2134556, 0
+seek offset 2134556
+read params 1, 5352196, 3632
+seek params 1, 2138188, 0
+seek offset 2138188
+read params 1, 5355852, 2636
+seek params 1, 1483328, 0
+seek offset 1483328
+read params 1, 5391844, 17283
+seek params 1, 116296, 0
+seek offset 116296
+read params 1, 5409152, 6922
+seek params 1, 94972, 0
+seek offset 94972
+read params 1, 5423196, 1868
+seek params 1, 113180, 0
+seek offset 113180
+read params 1, 5430700, 2210
+seek params 1, 75532, 0
+seek offset 75532
+read params 1, 5443684, 19440
+seek params 1, 68880, 0
+seek offset 68880
+read params 1, 5474108, 6650
+seek params 1, 105624, 0
+seek offset 105624
+read params 1, 5476028, 948
+seek params 1, 106572, 0
+seek offset 106572
+read params 1, 5488324, 6608
+seek params 1, 96840, 0
+seek offset 96840
+read params 1, 5511772, 8784
+seek params 1, 115392, 0
+seek offset 115392
+read params 1, 5511772, 904
+seek params 1, 67500, 0
+seek offset 67500
+read params 1, 5515292, 1380
+seek params 1, 3966900, 0
+seek offset 3966900
+read params 1, 5533120, 4096
+seek params 1, 3991476, 0
+seek offset 3991476
+read params 1, 5537240, 4096
+seek params 1, 3995572, 0
+seek offset 3995572
+read params 1, 5541360, 4096
+seek params 1, 3999668, 0
+seek offset 3999668
+read params 1, 5545480, 4096
+seek params 1, 4016052, 0
+seek offset 4016052
+read params 1, 5549600, 4096
+seek params 1, 4024244, 0
+seek offset 4024244
+read params 1, 5553720, 4096
+seek params 1, 4028340, 0
+seek offset 4028340
+read params 1, 5557840, 4096
+seek params 1, 4032436, 0
+seek offset 4032436
+read params 1, 5561960, 4096
+seek params 1, 4036532, 0
+seek offset 4036532
+read params 1, 5566080, 4096
+seek params 1, 4040628, 0
+seek offset 4040628
+read params 1, 5570200, 4096
+seek params 1, 4093876, 0
+seek offset 4093876
+read params 1, 5574320, 4096
+seek params 1, 4097972, 0
+seek offset 4097972
+read params 1, 5578440, 4096
+seek params 1, 4118452, 0
+seek offset 4118452
+read params 1, 5582560, 4096
+seek params 1, 4122548, 0
+seek offset 4122548
+read params 1, 5586680, 4096
+seek params 1, 4134836, 0
+seek offset 4134836
+read params 1, 5590800, 4096
+seek params 1, 4171700, 0
+seek offset 4171700
+read params 1, 5594920, 4096

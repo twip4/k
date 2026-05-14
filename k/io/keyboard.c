@@ -42,13 +42,6 @@ int readkey(struct key_event* event)
     return 0;
 }
 
-int getkey(void)
-{
-    struct key_event event;
-    readkey(&event);
-    return event.key;
-}
-
 void handleKeyboard(void)
 {
     u8 scancode = inb(0x60);

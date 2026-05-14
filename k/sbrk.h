@@ -3,7 +3,7 @@
 
 #include <k/kstd.h>
 
-#define HEAP_SIZE 0x10000
+#define HEAP_SIZE 0x1000000
 
 void* sbrk(ssize_t increment);
 void heap_init();
