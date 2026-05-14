@@ -40,7 +40,8 @@ OBJS	= \
 	  io/vga.o \
 	  atapi.o \
 	  filesystem.o \
-	  sbrk.o
+	  sbrk.o \
+	  io/sound.o
 
 DEPS = $(OBJS:.o=.d)
 

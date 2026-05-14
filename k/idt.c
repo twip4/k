@@ -5,6 +5,7 @@
 #include "io.h"
 #include "io/keyboard.h"
 #include "io/serial.h"
+#include "io/sound.h"
 #include "syscall.h"
 #include "timer.h"
 
@@ -36,7 +37,9 @@ void generic_c_handler(interrupt_frame_t* frame)
     {
         if (frame->vector == 32)
         {
+            // printf("time update\n");
             time++; // timer
+            sound_tick();
         }
 
         if (frame->vector == 33)

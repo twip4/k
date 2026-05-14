@@ -5,6 +5,7 @@
 #include "filesystem.h"
 #include "io/keyboard.h"
 #include "io/serial.h"
+#include "io/sound.h"
 #include "io/vga.h"
 #include "k/kstd.h"
 #include "k/types.h"
@@ -192,12 +193,10 @@ u32 sys_setpalette(u32 ebx, u32 ecx, u32 edx)
 
 u32 sys_playsound(u32 ebx, u32 ecx, u32 edx)
 {
-    (void)ebx;
-    (void)ecx;
     (void)edx;
 
-    printf("sys sound\n");
-    return 42;
+    return playsound((struct melody*)ebx, (int)ecx);
+    return -1;
 }
 
 u32 sys_getmouse(u32 ebx, u32 ecx, u32 edx)
