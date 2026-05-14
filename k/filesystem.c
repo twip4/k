@@ -67,8 +67,6 @@ int find(u32 root_lba, u32 root_size, const char* filename, struct iso_dir* out)
             if (strncasecmp(d->idf, filename, len) == 0
                 && strlen(filename) == len)
             {
-                printf("found: %.*s size=%d lba=%d\n", d->idf_len, d->idf,
-                       d->file_size.le, d->data_blk.le);
                 memcpy(out, d, sizeof(struct iso_dir));
                 return 1;
             }

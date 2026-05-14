@@ -35,12 +35,14 @@ void handleSyscall(interrupt_frame_t* frame)
     // printf("syscall %d\n", frame->eax);
     if (frame->eax >= NR_SYSCALL)
     {
+        printf("syscall to high %d\n", frame->eax);
         frame->eax = -1;
         return;
     }
 
     if (!handler_table[frame->eax])
     {
+        printf("syscall not implem %d\n", frame->eax);
         frame->eax = -1;
         return;
     }
@@ -97,7 +99,7 @@ u32 sys_write(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    printf("write params %s\n", ebx);
+    // printf("write params %s\n", ebx);
 
     write_serial(ebx);
     return 0;
@@ -109,18 +111,9 @@ u32 sys_sbrk(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    printf("sbrk params %d\n", ebx);
+    // printf("sbrk params %d\n", ebx);
 
     return (u32)sbrk(ebx);
-}
-
-u32 sys_getkey(u32 ebx, u32 ecx, u32 edx)
-{
-    (void)ebx;
-    (void)ecx;
-    (void)edx;
-
-    return 42;
 }
 
 u32 sys_gettick(u32 ebx, u32 ecx, u32 edx)
@@ -136,26 +129,26 @@ u32 sys_open(u32 ebx, u32 ecx, u32 edx)
 {
     (void)edx;
 
-    printf("open params %s, %d, %d\n", ebx, ecx, edx);
+    // printf("open params %s, %d, %d\n", ebx, ecx, edx);
 
     int fd = open((const char*)ebx, ecx);
 
-    printf("fd %d\n", fd);
+    // printf("fd %d\n", fd);
     return fd;
 }
 
 u32 sys_read(u32 ebx, u32 ecx, u32 edx)
 {
-    printf("read params %d, %d, %d\n", ebx, ecx, edx);
+    // printf("read params %d, %d, %d\n", ebx, ecx, edx);
     return read(ebx, (void*)ecx, edx);
 }
 
 u32 sys_lseek(u32 ebx, u32 ecx, u32 edx)
 {
-    printf("seek params %d, %d, %d\n", ebx, ecx, edx);
+    // printf("seek params %d, %d, %d\n", ebx, ecx, edx);
     int res = seek(ebx, ecx, edx);
 
-    printf("seek offset %d\n", res);
+    // printf("seek offset %d\n", res);
 
     return res;
 }
@@ -165,7 +158,7 @@ u32 sys_close(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    printf("close fd%d\n", ebx);
+    // printf("close fd%d\n", ebx);
 
     return close(ebx);
 }
@@ -175,7 +168,7 @@ u32 sys_setvideo(u32 ebx, u32 ecx, u32 edx)
     (void)ecx;
     (void)edx;
 
-    printf("setvideo params %d\n", ebx);
+    // printf("setvideo params %d\n", ebx);
 
     return setvideo(ebx);
 }
@@ -224,5 +217,10 @@ u32 sys_readkey(u32 ebx, u32 ecx, u32 edx)
 
     struct key_event* key_event = (struct key_event*)ebx;
 
-    return readkey(key_event);
+    int res = readkey(key_event);
+
+    // if (!res)
+    //    printf("key code %d, state %d\n", key_event->key, key_event->state);
+
+    return res;
 }

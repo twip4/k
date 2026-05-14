@@ -15,8 +15,6 @@ typedef struct
     u32 count;
 } key_fifo_t;
 
-static key_fifo_t fifo = { 0 };
-
 void handleKeyboard(void);
 
 int readkey(struct key_event* event);
