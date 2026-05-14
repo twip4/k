@@ -22,6 +22,7 @@ u32 sys_lseek(u32 ebx, u32 ecx, u32 edx);
 u32 sys_close(u32 ebx, u32 ecx, u32 edx);
 u32 sys_setvideo(u32 ebx, u32 ecx, u32 edx);
 u32 sys_swap_frontbuffer(u32 ebx, u32 ecx, u32 edx);
+u32 sys_setpalette(u32 ebx, u32 ecx, u32 edx);
 u32 sys_playsound(u32 ebx, u32 ecx, u32 edx);
 u32 sys_getmouse(u32 ebx, u32 ecx, u32 edx);
 u32 sys_getkeymode(u32 ebx, u32 ecx, u32 edx);
@@ -64,6 +65,7 @@ void syscall_table_init()
     syscall_register(SYSCALL_CLOSE, sys_close);
     syscall_register(SYSCALL_SETVIDEO, sys_setvideo);
     syscall_register(SYSCALL_SWAP_FRONTBUFFER, sys_swap_frontbuffer);
+    syscall_register(SYSCALL_SETPALETTE, sys_setpalette);
     syscall_register(SYSCALL_PLAYSOUND, sys_playsound);
     syscall_register(SYSCALL_GETMOUSE, sys_getmouse);
     syscall_register(SYSCALL_READKEY, sys_readkey);
@@ -184,6 +186,14 @@ u32 sys_swap_frontbuffer(u32 ebx, u32 ecx, u32 edx)
     (void)edx;
 
     swap_frontbuffer((void*)ebx);
+    return 0;
+}
+
+u32 sys_setpalette(u32 ebx, u32 ecx, u32 edx)
+{
+    (void)edx;
+
+    set_palette((u32*)ebx, ecx);
     return 0;
 }
 

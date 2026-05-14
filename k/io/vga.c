@@ -38,3 +38,14 @@ void swap_frontbuffer(const void* buffer)
         memcpy((void*)0xA0000, buffer, 64000);
     }
 }
+
+void set_palette(u32* palette, size_t size)
+{
+    outb(0x3C8, 0); // commencer à l'index 0
+    for (size_t i = 0; i < size; i++)
+    {
+        outb(0x3C9, ((palette[i] >> 16) & 0xFF) >> 2); // R
+        outb(0x3C9, ((palette[i] >> 8) & 0xFF) >> 2); // G
+        outb(0x3C9, ((palette[i] >> 0) & 0xFF) >> 2); // B
+    }
+}
